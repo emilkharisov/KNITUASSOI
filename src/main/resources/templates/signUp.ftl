@@ -39,33 +39,33 @@
         Кафедра АССОИ
     </div>
     <form method="post" enctype="multipart/form-data">
-
+            <br>
            <label for="firstname">Имя
-                <input class="input-field" style="margin-left: 60px" id="firstname" name="firstname" maxlength="20">
+                <input class="input-field"  style="margin-left: 60px" id="firstname" name="firstname" maxlength="20">
            </label>
 
         <br>
 
         <label for="lastname">Фамилия
-            <input class="input-field" style="margin-left: 30px" id="lastname" name="lastname" maxlength="20">
+            <input class="input-field" style="margin-left: 15px" id="lastname" name="lastname" maxlength="20">
         </label>
 
         <br>
 
         <label for="login">Логин
-            <input class="input-field" style="margin-left: 50px" id="login" name="login" maxlength="20">
+            <input class="input-field" style="margin-left: 45px" id="login" name="login" maxlength="20">
         </label>
 
         <br>
 
         <label for="password">Пароль
-            <input class="input-field" type="password" style="margin-left: 40px" id="password" name="password" maxlength="20">
+            <input class="input-field" style="margin-left: 30px" type="password"  id="password" name="password" maxlength="20">
         </label>
 
         <br>
 
         <label for="activateKey">Ключ
-            <input class="input-field" style="margin-left: 53px" id="activateKey" name="activateKey" maxlength="10">
+            <input class="input-field"  style="margin-left: 50px" id="activateKey" name="activateKey" maxlength="10">
         </label>
 
         <br>

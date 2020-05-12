@@ -2,7 +2,7 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Научный труд</title>
+    <title>Добавить студента</title>
     <meta name="description" content="Описание страницы"/>
     <link href="/css/styles2.css" rel="stylesheet" type="text/css">
     <style>
@@ -25,7 +25,27 @@
 
 </head>
 <body>
+<#if validError??>
+    <script>
+        window.onload = function() {
+            var arrayOfErrors = [];
+            arrayOfErrors[0] = 'Ошибки:'
+            var counter = 0;
+            <#if firstnameError??>document.getElementById("firstname").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${firstnameError}' + ' - Имя'</#if>
+            <#if lastnameError??>document.getElementById("lastname").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${lastnameError}' + ' - Фамилия'</#if>
+            <#if thirdnameError??>document.getElementById("thirdname").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${thirdnameError}' + ' - Отчество'</#if>
+            <#if telephoneError??>document.getElementById("telephone").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${telephoneError}' + ' - Телефон'</#if>
+            <#if directionError??>document.getElementById("direction").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${directionError}' + ' - Направление'</#if>
+            <#if groupError??>document.getElementById("group").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${groupError}' + ' - Группа'</#if>
 
+            var message = '';
+            for(var i=0; i<arrayOfErrors.length; i++){
+                message = message + arrayOfErrors[i] + '\n';
+            }
+            alert(message);
+        }
+    </script>
+</#if>
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/getMainPage"><img src="/static/img/logo.png" height="90px"></a>
@@ -79,36 +99,36 @@
     <form method="post" action="/addStudent">
         <br>
             <label for="firstname"><font color="white">Имя</font>
-                <input class="input-field" style="margin-left: 75px" id="firstname" name="firstname" maxlength="20">
+                <input class="input-field" style="margin-left: 183px" id="firstname" name="firstname" maxlength="20">
             </label>
             <label for="lastname"><font color="white">Фамилия</font>
-                <input class="input-field" style="margin-left: 75px" id="lastname" name="lastname" maxlength="20">
+                <input class="input-field" style="margin-left: 137px" id="lastname" name="lastname" maxlength="20">
             </label>
             <label for="thirdname"><font color="white">Отчетсво</font>
-                <input class="input-field" style="margin-left: 75px" id="thirdname" name="thirdname" maxlength="20">
+                <input class="input-field" style="margin-left: 137px" id="thirdname" name="thirdname" maxlength="20">
             </label>
             <label for="telephone"><font color="white">Телефон</font>
-                <input class="input-field" style="margin-left: 75px" id="telephone" name="telephone" maxlength="11">
+                <input class="input-field" style="margin-left: 140px" id="telephone" name="telephone" maxlength="11">
             </label>
             <label for="educationLevel"><font color="white">Уровень образования</font>
-                <select name="educationLevel" id="educationLevel" class="select-field">
+                <select name="educationLevel" style="margin-left: 20px" id="educationLevel" class="select-field">
                     <option disabled>Выберите уровень образования</option>
                     <option value="Бакалавриат">Бакалавриат</option>
                     <option value="Магистр">Магистр</option>
                 </select>
             </label>
             <label for="formOfEducation"><font color="white">Форма обучения</font>
-                <select name="formOfEducation" id="formOfEducation" class="select-field">
+                <select name="formOfEducation" style="margin-left: 65px" id="formOfEducation" class="select-field">
                     <option disabled>Выберите форму обучения</option>
                     <option value="Очная">Очная</option>
                     <option value="Заочная">Заочная</option>
                 </select>
             </label>
             <label for="direction"><font color="white">Направление</font>
-                <input class="input-field" style="margin-left: 75px" id="direction" name="direction" maxlength="5">
+                <input class="input-field" style="margin-left: 95px" id="direction" name="direction" maxlength="8">
             </label>
             <label for="group"><font color="white">Группа</font>
-                <input class="input-field" style="margin-left: 75px" id="group" name="group" maxlength="8">
+                <input class="input-field" style="margin-left: 155px" id="group" name="group" maxlength="8">
             </label>
             <input type="submit" value="Отправить">
     </form>

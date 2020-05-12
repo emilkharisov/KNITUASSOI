@@ -47,5 +47,13 @@ public class Worker {
     private String hiringTerm;
     private Date dateOfPedBeginWork;
     private String dateOfPedBeginWorkShow;
+    private Boolean highEducation;
+    private Boolean avgEducation;
+    private Boolean begEducation;
+    private String highEducationInfo;
+    private String avgEducationInfo;
+    private String begEducationInfo;
+
+    private Date qualificationDate;
 
 }

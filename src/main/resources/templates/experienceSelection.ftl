@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Выборка</title>
     <meta name="description" content="Описание страницы" />
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/styles2.css" rel="stylesheet" type="text/css">
     <link href="/static/css/table.css" rel="stylesheet">
     <style>
         table {

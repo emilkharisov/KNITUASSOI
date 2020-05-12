@@ -38,6 +38,52 @@
                 document.getElementById("highYear").parentElement.parentElement.hidden = false;
                 document.getElementById("highOrganisation").parentElement.parentElement.hidden = false;
             }
+            if (name == "A" && element.checked){
+                console.log( document.getElementById("avDirection").parentElement.parentElement)
+                document.getElementById("avDirection").parentElement.parentElement.hidden = false;
+                document.getElementById("avSpec").parentElement.parentElement.hidden = false;
+                document.getElementById("avNumber").parentElement.parentElement.hidden = false;
+                document.getElementById("avSeria").parentElement.parentElement.hidden = false;
+                document.getElementById("avYear").parentElement.parentElement.hidden = false;
+                document.getElementById("avOrganisation").parentElement.parentElement.hidden = false;
+            }
+            if (name == "B" && element.checked){
+                console.log( document.getElementById("begDirection").parentElement.parentElement)
+                document.getElementById("begDirection").parentElement.parentElement.hidden = false;
+                document.getElementById("begSpec").parentElement.parentElement.hidden = false;
+                document.getElementById("begNumber").parentElement.parentElement.hidden = false;
+                document.getElementById("begSeria").parentElement.parentElement.hidden = false;
+                document.getElementById("begYear").parentElement.parentElement.hidden = false;
+                document.getElementById("begOrganisation").parentElement.parentElement.hidden = false;
+            }
+
+            if (name == "H" && !element.checked){
+                console.log( document.getElementById("highDirection").parentElement.parentElement)
+                document.getElementById("highDirection").parentElement.parentElement.hidden = true;
+                document.getElementById("highSpec").parentElement.parentElement.hidden = true;
+                document.getElementById("highNumber").parentElement.parentElement.hidden = true;
+                document.getElementById("highSeria").parentElement.parentElement.hidden = true;
+                document.getElementById("highYear").parentElement.parentElement.hidden = true;
+                document.getElementById("highOrganisation").parentElement.parentElement.hidden = true;
+            }
+            if (name == "A" && !element.checked){
+                console.log( document.getElementById("avDirection").parentElement.parentElement)
+                document.getElementById("avDirection").parentElement.parentElement.hidden = true;
+                document.getElementById("avSpec").parentElement.parentElement.hidden = true;
+                document.getElementById("avNumber").parentElement.parentElement.hidden = true;
+                document.getElementById("avSeria").parentElement.parentElement.hidden = true;
+                document.getElementById("avYear").parentElement.parentElement.hidden = true;
+                document.getElementById("avOrganisation").parentElement.parentElement.hidden = true;
+            }
+            if (name == "B" && !element.checked){
+                console.log( document.getElementById("begDirection").parentElement.parentElement)
+                document.getElementById("begDirection").parentElement.parentElement.hidden = true;
+                document.getElementById("begSpec").parentElement.parentElement.hidden = true;
+                document.getElementById("begNumber").parentElement.parentElement.hidden = true;
+                document.getElementById("begSeria").parentElement.parentElement.hidden = true;
+                document.getElementById("begYear").parentElement.parentElement.hidden = true;
+                document.getElementById("begOrganisation").parentElement.parentElement.hidden = true;
+            }
         }
     </script>
 </head>
@@ -52,9 +98,20 @@
             <#if firstnameError??>document.getElementById("first-name").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${firstnameError}' + ' - Имя'</#if>
             <#if lastnameError??>document.getElementById("last-name").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${lastnameError}' + ' - Фамилия'</#if>
             <#if telephoneError??>document.getElementById("telephone1").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${telephoneError}' + ' - Телефон'</#if>
-            <#if dateOfBeginWorkError??>document.getElementById("dateOfBeginWork").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${dateOfBeginWorkError}' + ' - Дата начала работы'</#if>
+            <#if dateOfBeginWorkError??>document.getElementById("dateOfBeginWork").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${dateOfBeginWorkError}' + ' - Дата начала стажа'</#if>
             <#if dateEndOfContractError??>document.getElementById("dateEndOfContract").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${dateEndOfContractError}' + ' - Дата окончания контракта'</#if>
             <#if dateOfBirthError??>document.getElementById("dateOfBirth").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${dateOfBirthError}' + ' - Дата рождения'</#if>
+            <#if emailError??>document.getElementById("email").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${emailError}' + ' - Email'</#if>
+            <#if dateOfPedBeginWorkError??>document.getElementById("dateOfPedBeginWork").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${dateOfPedBeginWorkError}' + ' - Дата начала пед стажа'</#if>
+            <#if thirdnameError??>document.getElementById("thirdname").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${thirdnameError}' + ' - Отчество'</#if>
+            <#if addressRegistrationError??>document.getElementById("addressRegistration").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${addressRegistrationError}' + ' - Адрес регистрации'</#if>
+            <#if addressPlaceOfResidenceError??>document.getElementById("addressPlaceOfResidence").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${addressPlaceOfResidenceError}' + ' - Адрес проживания'</#if>
+            <#if pasportError??>document.getElementById("pasport").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${pasportError}' + ' - Серия'</#if>
+            <#if pasport1Error??>document.getElementById("pasport1").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${pasport1Error}' + ' - Номер паспорта'</#if>
+            <#if pasport3Error??>document.getElementById("pasport3").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${pasport3Error}' + ' - Код подразделения'</#if>
+
+
+
             var message = '';
             for(var i=0; i<arrayOfErrors.length; i++){
                 message = message + arrayOfErrors[i] + '\n';
@@ -115,7 +172,7 @@
 </div>
 <hr>
 <div class="form-style-2" id="block" align="center">
-    <form method="post" enctype="multipart/form-data" action="/hello">
+    <form method="post" enctype="multipart/form-data" action="/addWorker">
                             <label for="first-name">Имя</label>
                             <input class="input-field" id="first-name" name="firstname" maxlength="20">
                             <hr>
@@ -126,25 +183,25 @@
                             <input class="input-field"  id="thirdname" name="thirdname" maxlength="20">
                             <hr>
                             <label>Паспорт</label>
-                                <input class="input-field"  id="pasport" name="pasport" maxlength="20" placeholder="Серия">
-                                <input class="input-field"  id="pasport1" name="pasport1" maxlength="20" placeholder="Номер">
-                                <input class="input-field"  id="pasport2" name="pasport2" maxlength="20" placeholder="Кем выдан">
-                                <input class="input-field"  id="pasport3" name="pasport3" maxlength="20" placeholder="Код подразделения">
+                                <input class="input-field"  id="pasport" name="pasport" maxlength="4" placeholder="Серия">
+                                <input class="input-field"  id="pasport1" name="pasport1" maxlength="6" placeholder="Номер">
+                                <input class="input-field"  id="pasport2" name="pasport2" placeholder="Кем выдан">
+                                <input class="input-field"  id="pasport3" name="pasport3" maxlength="7" placeholder="Код подразделения">
                             <hr>
                             <label for="telephone1">Телефон</label>
                             <input class="input-field"   id="telephone1" name="telephone" maxlength="11">
                                 <hr>
                             <label for="addressRegistration">Адрес регистрации</label>
-                            <input class="input-field" id="addressRegistration" name="addressRegistration" maxlength="11">
+                            <input class="input-field" id="addressRegistration" name="addressRegistration" maxlength="30">
                             <hr>
                             <label for="addressPlaceOfResidence">Адрес проживания</label>
-                            <input class="input-field" id="addressPlaceOfResidence" name="addressPlaceOfResidence" maxlength="11">
+                            <input class="input-field" id="addressPlaceOfResidence" name="addressPlaceOfResidence" maxlength="30">
                             <hr>
                             <label for="email">Email</label>
-                            <input class="input-field" id="email" name="email" maxlength="11">
+                            <input class="input-field" id="email" name="email" maxlength="30">
                             <hr>
                             <label for="rate">Ставка</label>
-                            <input class="input-field" id="rate" name="rate" maxlength="11">
+                            <input class="input-field" id="rate" name="rate">
                             <hr>
                             <label for="hiringConditionOfWorker">Условие найма</label>
                             <select name="hiringConditionOfWorker" id="hiringConditionOfWorker" class="select-field">
@@ -216,13 +273,13 @@
                             <hr>
 
                             <table style="border-spacing: 10px;border-collapse: separate;">
-                                <tr hidden>
+                                <tr>
                                     <td><label>Магистр</label></td>
                                     <td><input type="checkbox" id="checkMagistr" name="checkMagistr" style="zoom: 4"></td>
                                 </tr>
                                 <tr>
                                     <td><label>Высшее образование</label></td>
-                                    <td><input type="checkbox" id="сheckHigh" name="сheckHigh" style="zoom: 4" onclick="showOrHide(this, 'H')"></td>
+                                    <td><input type="checkbox" id="checkHigh" name="checkHigh" style="zoom: 4" onclick="showOrHide(this, 'H')"></td>
                                 </tr>
                                 <tr hidden>
                                     <td><input class="input-field" placeholder="Направление" id="highDirection" name="highDirection"></td>
@@ -240,15 +297,51 @@
                                     <td><input class="input-field" placeholder="Год выдачи" id="highYear" name="highYear" ></td>
                                 </tr>
                                 <tr hidden>
-                                    <td><input class="input-field" placeholder="Организация" id="highOrganisation" name="сheckHigh"></td>
+                                    <td><input class="input-field" placeholder="Организация" id="highOrganisation" name="highOrganisation"></td>
                                 </tr>
                                 <tr>
                                     <td><label>СПО</label></td>
-                                    <td><input type="checkbox" id="checkAverage" name="checkAverage" style="zoom: 4"></td>
+                                    <td><input type="checkbox" id="checkAverage" name="checkAverage" style="zoom: 4" onclick="showOrHide(this, 'A')"></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Направление" id="avDirection" name="avDirection"></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Специальность" id="avSpec" name="avSpec"></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Номер документа" id="avNumber" name="avNumber" ></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Серия документa" id="avSeria" name="avSeria" ></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Год выдачи" id="avYear" name="avYear" ></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Организация" id="avOrganisation" name="avOrganisation"></td>
                                 </tr>
                                 <tr>
                                     <td><label>НПО</label></td>
-                                    <td><input type="checkbox" id="сheckBegin" name="checkBegin" style="zoom: 4"></td>
+                                    <td><input type="checkbox" id="сheckBegin" name="checkBegin" style="zoom: 4" onclick="showOrHide(this, 'B')"></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Направление" id="begDirection" name="begDirection"></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Специальность" id="begSpec" name="begSpec"></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Номер документа" id="begNumber" name="begNumber" ></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Серия документa" id="begSeria" name="begSeria" ></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Год выдачи" id="begYear" name="begYear" ></td>
+                                </tr>
+                                <tr hidden>
+                                    <td><input class="input-field" placeholder="Организация" id="begOrganisation" name="begOrganisation"></td>
                                 </tr>
                             </table>
                              <hr>

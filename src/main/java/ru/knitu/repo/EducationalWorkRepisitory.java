@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import ru.knitu.model.EducationalWork;
+import ru.knitu.model.Worker;
 
 
 import java.util.List;
@@ -26,5 +27,7 @@ public interface EducationalWorkRepisitory  extends JpaRepository<EducationalWor
 
     @Query("SELECT e FROM EducationalWork e WHERE typeOfWork='Учебные пособия'")
     List<EducationalWork> getPatentsListBenefits();
+
+    List<EducationalWork> findAllByWorker(Worker worker);
 
 }

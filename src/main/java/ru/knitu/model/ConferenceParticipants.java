@@ -19,6 +19,10 @@ public class ConferenceParticipants {
     private Long id;
 
     private Long conference_id;
-    private Long worker_id;
-    private Long student_id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "worker_id")
+    private Worker worker;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "student_id")
+    private Student student;
 }

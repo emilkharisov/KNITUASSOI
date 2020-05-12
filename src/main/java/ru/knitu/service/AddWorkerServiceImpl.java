@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.time.Period;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.Optional;
 
 @Service
 public class AddWorkerServiceImpl implements AddWorkerService {
@@ -27,6 +28,65 @@ public class AddWorkerServiceImpl implements AddWorkerService {
         Date dateOfBeginWorkWorker = simpleDateFormat.parse(workerForm.getDateOfBeginWork());
         Date dateOfPedBeginWork = simpleDateFormat.parse(workerForm.getDateOfPedBeginWork());
         String pasportInfo = workerForm.getPasport() + " " +  workerForm.getPasport1() + " " +  workerForm.getPasport2() + " " + workerForm.getPasport3();
+
+        //Educational info
+        String highDirection="";
+        String highSpec="";
+        String highNumber="";
+        String highSeria="";
+        String highYear="";
+        String highOrganiation="";
+        String highEducationInfo="";
+        //Avg Education
+        String avDirection="";
+        String avSpec="";
+        String avNumber="";
+        String avSeria="";
+        String avYear="";
+        String avOrganiation="";
+        String avgEducationInfo="";
+        //Begin Education
+        String begDirection="";
+        String begSpec="";
+        String begNumber="";
+        String begSeria="";
+        String begYear="";
+        String begOrganiation="";
+        String begEducationInfo="";
+
+        Optional<Boolean> workerFormOptional = Optional.ofNullable(workerForm.getCheckHigh());
+        Optional<Boolean> workerFormOptional1 = Optional.ofNullable(workerForm.getCheckAverage());
+        Optional<Boolean> workerFormOptional2 = Optional.ofNullable(workerForm.getCheckBegin());
+
+        if (workerFormOptional.isPresent()){
+            highDirection = workerForm.getHighDirection();
+            highSpec = workerForm.getHighSpec();
+            highNumber = workerForm.getHighNumber();
+            highSeria = workerForm.getHighSeria();
+            highYear = workerForm.getHighYear();
+            highOrganiation = workerForm.getHighOrganiation();
+            highEducationInfo = highDirection + "#" + highSpec + "#" + highNumber + "#" + highSeria + "#" + highYear + "#" + highOrganiation;
+        }
+        if (workerFormOptional1.isPresent()){
+            avDirection = workerForm.getAvDirection();
+            avSpec = workerForm.getAvSpec();
+            avNumber = workerForm.getAvNumber();
+            avSeria = workerForm.getAvSeria();
+            avYear = workerForm.getAvYear();
+            avOrganiation = workerForm.getAvOrganiation();
+            avgEducationInfo = avDirection + "#" + avSpec + "#" + avNumber + "#" + avSeria + "#" + avYear + "#" + avOrganiation;
+        }
+        if (workerFormOptional2.isPresent()){
+            begDirection = workerForm.getBegDirection();
+            begSpec = workerForm.getBegSpec();
+            begNumber = workerForm.getBegNumber();
+            begSeria = workerForm.getBegSeria();
+            begYear = workerForm.getBegYear();
+            begOrganiation = workerForm.getBegOrganiation();
+            begEducationInfo = begDirection + "#" + begSpec + "#" + begNumber + "#" + begSeria + "#" + begYear + "#" + begOrganiation;
+        }
+
+
         Worker worker = Worker.builder()
                     .firstname(workerForm.getFirstname())
                     .lastname(workerForm.getLastname())
@@ -53,8 +113,13 @@ public class AddWorkerServiceImpl implements AddWorkerService {
                     .hiringConditionOfWorker(workerForm.getHiringConditionOfWorker())
                     .email(workerForm.getEmail())
                     .pasport(pasportInfo)
+                    .highEducation(workerForm.getCheckHigh())
+                    .highEducationInfo(highEducationInfo)
+                    .avgEducation(workerForm.getCheckAverage())
+                    .avgEducationInfo(avgEducationInfo)
+                    .begEducation(workerForm.getCheckBegin())
+                    .begEducationInfo(begEducationInfo)
                 .build();
-        System.out.println();
         workerRepository.save(worker);
     }
 }

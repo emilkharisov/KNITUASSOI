@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Выборка</title>
     <meta name="description" content="Описание страницы" />
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/styles2.css" rel="stylesheet" type="text/css">
     <link href="/static/css/table.css" rel="stylesheet">
     <style>
         table {
@@ -106,7 +106,15 @@
             <#list works as work>
                 <tr>
                     <td class="td">${work.getNameOfWork()}</td>
-                    <td class="td">${work.getAuthors()}</td>
+                    <#if work.getWorker()?? && work.getStudent()??>
+                        <td class="td">${work.getWorker().getLastname()} ${work.getWorker().getFirstname()} - преподователь ${work.getStudent().getLastname()} ${work.getStudent().getLastname()} - студент</td>
+                    <#elseif work.getWorker()?? && !work.getStudent()??>
+                        <td class="td">${work.getWorker().getLastname()} ${work.getWorker().getFirstname()} - преподователь</td>
+                    <#elseif !work.getWorker()?? && work.getStudent()??>
+                        <td class="td">${work.getStudent().getLastname()} ${work.getStudent().getLastname()} - студент</td>
+                    <#else>
+                        <td class="td">Автор не введён</td>
+                    </#if>
                     <td class="td">${work.getAmountOfPages()}</td>
                     <td class="td">${work.getPublishing()}</td>
                     <td class="td">${work.getYearOfPublication()}</td>

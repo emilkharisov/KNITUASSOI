@@ -71,11 +71,15 @@ public class ConferenceParticipantsController {
         modelMap.addAttribute("students",studentRepository.findAll());
 
 
+        if((workers.equals("") && students.equals("")) || conferences.equals("")){
+            modelMap.addAttribute("validError", true);
+            return "confParticipants";
+        }
+
         ConferenceParticipants conferenceParticipants = new ConferenceParticipants();
         String conferenceName = conferences.split("\\|")[0];
         String conferenceDate = conferences.split("\\|")[1];
-        System.out.println(conferences);
-        System.out.println(conferenceName+" "+conferenceDate);
+
 
         conferenceParticipants.setConference_id(conferenceRepository.findOneByNameAndDateOfStartShow(conferenceName, conferenceDate).getId());
         if(!workers.equals("")){
@@ -83,7 +87,7 @@ public class ConferenceParticipantsController {
             String lastName = workers.split("\\|")[0];
             String thirdName = workers.split("\\|")[2];
             String position = workers.split("\\|")[3];
-            conferenceParticipants.setWorker_id(workerRepository.findByLastnameAndFirstnameAndThirdnameAndPosition(lastName, firstName, thirdName, position).getId());
+            conferenceParticipants.setWorker(workerRepository.findByLastnameAndFirstnameAndThirdnameAndPosition(lastName, firstName, thirdName, position));
         }
 
         if(!students.equals("")){
@@ -91,7 +95,7 @@ public class ConferenceParticipantsController {
             String lastName = students.split("\\|")[0];
             String thirdName = students.split("\\|")[2];
             String group = students.split("\\|")[3];
-            conferenceParticipants.setStudent_id(studentRepository.findByLastnameAndFirstnameAndThirdnameAndEducationGroup(lastName,firstName,thirdName,group).getId());
+            conferenceParticipants.setStudent(studentRepository.findByLastnameAndFirstnameAndThirdnameAndEducationGroup(lastName,firstName,thirdName,group));
         }
         conferenceParticipantsRepository.save(conferenceParticipants);
         return "confParticipants";

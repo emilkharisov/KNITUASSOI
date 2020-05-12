@@ -26,11 +26,21 @@ public class AddEducationalWorkServiceImpl implements AddWorkService {
         EducationalWorkForm educationalWorkForm = (EducationalWorkForm) form;
         Student student = null;
         Worker worker = null;
-        if (educationalWorkForm.getStudent() != null){
-            student = studentRepository.findById(educationalWorkForm.getStudent());
+
+        Long studentLong = null;
+        Long workerLong = null;
+        if(!educationalWorkForm.getStudent().equals("")){
+            studentLong = Long.parseLong(educationalWorkForm.getStudent());
         }
-        if (educationalWorkForm.getWorker() != null){
-            worker = workerRepository.findById(educationalWorkForm.getWorker());
+        if(!educationalWorkForm.getWorker().equals("")){
+            workerLong = Long.parseLong(educationalWorkForm.getWorker());
+        }
+
+        if (studentLong != null){
+            student = studentRepository.findById(studentLong);
+        }
+        if (workerLong != null){
+            worker = workerRepository.findById(workerLong);
         }
         EducationalWork educationalWork = EducationalWork.builder()
                         .typeOfWork(educationalWorkForm.getTypeOfWork())

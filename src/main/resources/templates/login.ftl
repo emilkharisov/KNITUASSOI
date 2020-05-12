@@ -30,7 +30,7 @@
         </label>
         <br>
         <label for="password">Пароль
-            <input class="input-field" type="password" style="margin-left: 50px" id="password" name="password" maxlength="20">
+            <input class="input-field" type="password" style="margin-left: 45px" id="password" name="password" maxlength="20">
         </label>
         <br>
         <label for="remember-me">

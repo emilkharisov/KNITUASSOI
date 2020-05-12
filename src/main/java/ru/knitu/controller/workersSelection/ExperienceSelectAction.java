@@ -57,8 +57,9 @@ public class ExperienceSelectAction {
         }
         int experience = Integer.parseInt(experienceInput);
         ArrayList<Worker> listOfWorkers = new ArrayList<Worker>();
+
+        Date currentDate = new Date();
         for(Worker worker: workerRepository.findAll()){
-            Date currentDate = new Date();
             Period period = Period.between(currentDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),worker.getDateOfBeginWork().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
             if(Math.abs(period.getYears())==experience || Math.abs(period.getYears())>experience){
                 listOfWorkers.add(worker);

@@ -197,11 +197,17 @@
                     Добавить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/hello" style="font-size: 25px">Преподователя</a>
+                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподователя</a>
                     <a class="dropdown-item" href="/addStudent" style="font-size: 25px">Cтудента</a>
                     <a class="dropdown-item" href="/addEducationalWork" style="font-size: 25px">Учебный труд</a>
                     <a class="dropdown-item" href="/addScienceWork" style="font-size: 25px">Научный труд</a>
                     <a class="dropdown-item" href="/addConference" style="font-size: 25px">Конференцию</a>
+                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конферренции</a>
+                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интелектуальную собственность</a>
+                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интелектуальной собственности</a>
+                    <a class="dropdown-item" href="/addQualification" style="font-size: 25px">Квалификацию</a>
+                    <a class="dropdown-item" href="/qualification" style="font-size: 25px">Повышение квалификации</a>
+                    <a class="dropdown-item" href="/addCandidateWork" style="font-size: 25px">Кандидатскую | Докторскую</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#" style="font-size: 25px">Something else here</a>
                 </div>

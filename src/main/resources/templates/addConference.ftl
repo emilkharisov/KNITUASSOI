@@ -2,7 +2,7 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Научный труд</title>
+    <title>Добавить конференцию</title>
     <meta name="description" content="Описание страницы"/>
     <link href="/css/styles2.css" rel="stylesheet" type="text/css">
     <style>
@@ -25,6 +25,27 @@
 
 </head>
 <body>
+
+<#if validError??>
+    <script>
+        window.onload = function() {
+            var arrayOfErrors = [];
+            arrayOfErrors[0] = 'Ошибки:'
+            var counter = 0;
+            <#if nameError??>document.getElementById("name").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${nameError}' + ' - Название'</#if>
+            <#if dateOfStartError??>document.getElementById("dateOfStart").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${dateOfStartError}' + ' - Дата начала'</#if>
+            <#if dateOfEndError??>document.getElementById("dateOfEnd").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${dateOfEndError}' + ' - Дата окончания'</#if>
+            <#if cityError??>document.getElementById("city").style.backgroundColor="red";counter= counter +1;arrayOfErrors[counter]='${cityError}' + ' - Город'</#if>
+
+
+            var message = '';
+            for(var i=0; i<arrayOfErrors.length; i++){
+                message = message + arrayOfErrors[i] + '\n';
+            }
+            alert(message);
+        }
+    </script>
+</#if>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -82,18 +103,18 @@
             <input class="input-field" style="margin-left: 75px" id="name" name="name" maxlength="20">
         </label>
         <label for="dateOfStart"><font color="white">Дата начала</font>
-            <input type="date"  id="dateOfStart" name="dateOfStart" class="data-field">
+            <input type="date"   style="margin-left: 47px" id="dateOfStart" name="dateOfStart" class="data-field">
         </label>
         <label for="dateOfEnd"><font color="white">Дата окончания</font>
-            <input type="date"  id="dateOfEnd" name="dateOfEnd" class="data-field">
+            <input type="date"  style="margin-left: 15px" id="dateOfEnd" name="dateOfEnd" class="data-field">
         </label>
         <label for="city"><font color="white">Город</font>
-            <input class="input-field" style="margin-left: 75px" id="city" name="city" maxlength="20">
+            <input class="input-field" style="margin-left: 107px" id="city" name="city" maxlength="20">
         </label>
         <label for="level"><font color="white">Уровень</font>
-            <select name="level" id="level" class="select-field">
+            <select name="level"  style="margin-left: 85px" id="level" class="select-field">
                 <option disabled>Выберите уровень</option>
-                <option value="Междунаролный">Междунаролный</option>
+                <option value="Международный">Международный</option>
                 <option value="Всероссийсий">Всероссийсий</option>
                 <option value="Региональный">Региональный</option>
                 <option value="Городской">Городской</option>

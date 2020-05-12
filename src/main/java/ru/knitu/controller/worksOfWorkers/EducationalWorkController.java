@@ -24,7 +24,7 @@ public class EducationalWorkController {
     @Autowired
     StudentRepository studentRepository;
 
-    @GetMapping("addEducationalWork")
+    @GetMapping("/addEducationalWork")
     public String getEducationalWorkPage(Authentication authentication, ModelMap modelMap) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userDetails.getUser();
@@ -40,8 +40,8 @@ public class EducationalWorkController {
         return "educationalWork";
     }
 
-    @PostMapping("addEducationalWork")
-    public String addEducationalWork(EducationalWorkForm educationalWorkForm, ModelMap modelMap, Authentication authentication){
+    @PostMapping("/addEducationalWork")
+    public String addEducationalWork(ModelMap modelMap, Authentication authentication,EducationalWorkForm educationalWorkForm){
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userDetails.getUser();
         String userImage = user.getImage();

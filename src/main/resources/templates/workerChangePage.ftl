@@ -33,10 +33,8 @@
                 transform: rotate(360deg);
             }
         }
-        .round {
-            border-radius: 100px; /* Радиус скругления */
-            border: 3px solid gray; /* Параметры рамки */
-            box-shadow: 0 0 7px #666; /* Параметры тени */
+        .classTable {
+            font-size: 25px;
         }
     </style>
     <!-- Bootstrap CSS -->
@@ -94,13 +92,13 @@
 <!-- NAVBAR -->
 </body>
 <form  method="post" enctype="multipart/form-data">
-<table cellpadding="20">
+<table cellpadding="20" class="classTable">
     <tr>
         <td>
             <img src="${workerImage}" class="round" width="300px" height="300px">
         </td>
         <td>
-        <h2 style="margin-left: 20px">${worker.getLastname()} ${worker.getFirstname()}</h2>
+        <h2 style="margin-left: 20px">${worker.getLastname()} ${worker.getFirstname()} ${worker.getThirdname()}</h2>
         <table cellpadding="20">
             <tr>
                 <td><label>Дата рождения</label></td>
@@ -109,6 +107,10 @@
             <tr>
                 <td><label>Номер телефона</label></td>
                 <td><input class="input-field" value="${worker.getTelephone()}" name="telephone"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input class="input-field" value="${worker.getEmail()}" name="email"></td>
             </tr>
             <tr>
                 <td><label>Должность</label></td>
@@ -126,6 +128,21 @@
                         <option value="Математик">Математик</option>
                         <option value="Техник">Техник</option>
                         <option value="Лаборант">Математик</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Ставка</label></td>
+                <td><input class="input-field" value="${worker.getRate()}" name="rate"></td>
+            </tr>
+            <tr>
+                <td><label>Условие найма</label></td>
+                <td>
+                    <select name="hiringConditionOfWorker" id="hiringConditionOfWorker" class="select-field">
+                        <option disabled>Выберите условие найма</option>
+                        <option value="Штатное">Штатное</option>
+                        <option value="Внешняя совместимость">Внешняя совместимость</option>
+                        <option value="Внутреняя совместимость">Внутреняя совместимость</option>
                     </select>
                 </td>
             </tr>
@@ -166,12 +183,40 @@
                 <td><input type="date" id="dateOfBeginWork" name="dateOfBeginWork"></td>
             </tr>
             <tr>
+                <td><label>Дата начала пед стажа</label></td>
+                <td><input type="date"  id="dateOfPedBeginWork" name="dateOfPedBeginWork"</td>
+            </tr>
+            <tr>
                 <td><label>Дата окончания контракта</label></td>
                 <td><input type="date" id="dateEndOfContract" name="dateEndOfContract" value="21.02.2000"></td>
             </tr>
             <tr>
+                <td><label>Адрес Регистрации</label></td>
+                <td><input class="input-field" id="addressRegistration" name="addressRegistration" value="${worker.getAddressRegistration()}"></td>
+            </tr>
+            <tr>
+                <td><label>Адрес проживания</label></td>
+                <td> <input class="input-field" id="addressPlaceOfResidence" name="addressPlaceOfResidence" value="${worker.getAddressPlaceOfResidence()}"></td>
+            </tr>
+            <tr>
+                <td><label>Серия паспорта</label></td>
+                <td><input class="input-field"  id="pasport" name="pasport" maxlength="4" value="${seria}"></td>
+            </tr>
+            <tr>
+                <td><label>Номер паспорта</label></td>
+                <td> <input class="input-field"  id="pasport1" name="pasport1" maxlength="6" value="${number}"></td>
+            </tr>
+            <tr>
+                <td><label>Кем выдан</label></td>
+                <td><input class="input-field"  id="pasport2" name="pasport2" maxlength="20" value="${issuing}"></td>
+            </tr>
+            <tr>
+                <td><label>Код подразделения</label></td>
+                <td><input class="input-field"  id="pasport3" name="pasport3" maxlength="7" value="${code}"></td>
+            </tr>
+            <tr>
                 <td><label>Оканчивал магистратуру?</label></td>
-                <td><input type="checkbox" id="checkMagistr" name="checkMagistr" <#if magistr=='Да'>checked</#if>></td>
+                <td><input type="checkbox" id="checkMagistr" name="checkMagistr" style="zoom: 2" <#if magistr=='Да'>checked</#if>></td>
             </tr>
             <tr>
                 <td><input type="file" name="image"></td>

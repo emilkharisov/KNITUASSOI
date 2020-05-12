@@ -5,13 +5,16 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import ru.knitu.controller.ControllerUtils;
 import ru.knitu.form.ConferenceForm;
 import ru.knitu.model.User;
 import ru.knitu.security.details.UserDetailsImpl;
 import ru.knitu.service.AddConferenceService;
 
+import javax.validation.Valid;
 import java.text.ParseException;
 
 @Controller
@@ -38,7 +41,7 @@ public class AddConferenceController {
     }
 
     @PostMapping("/addConference")
-    public String addConference(Authentication authentication, ModelMap modelMap, ConferenceForm conferenceForm) throws ParseException {
+    public String addConference(Authentication authentication, @Valid ConferenceForm conferenceForm, BindingResult bindingResult, ModelMap modelMap) throws ParseException {
 
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userDetails.getUser();
@@ -50,8 +53,14 @@ public class AddConferenceController {
         }
         modelMap.addAttribute("login", user.getLogin());
 
-        addConferenceService.addConference(conferenceForm);
-
+        if (bindingResult.hasErrors()) {
+            modelMap.addAllAttributes(ControllerUtils.getErrors(bindingResult));
+            modelMap.addAttribute("validError", true);
+            return "addConference";
+        }
+        else {
+            addConferenceService.addConference(conferenceForm);
+        }
         return "addConference";
     }
 }

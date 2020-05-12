@@ -17,4 +17,6 @@ public interface ScienceWorkRepository extends JpaRepository<ScienceWork, Long> 
     @Query("SELECT s FROM ScienceWork s WHERE typeOfWork='Патенты'")
     List<ScienceWork> getPatentsList();
 
+    List<ScienceWork> findAllByWorker(Worker worker);
+
 }

@@ -29,7 +29,7 @@ public class AddWorkerController {
     @Value("${upload.path3}")
     String uploadPath3;
 
-    @GetMapping("/hello")
+    @GetMapping("/addWorker")
     public String method(Authentication authentication, ModelMap modelMap) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userDetails.getUser();
@@ -43,7 +43,7 @@ public class AddWorkerController {
     }
 
 
-    @PostMapping("/hello")
+    @PostMapping("/addWorker")
     public String method1(@Valid WorkerForm workerForm, BindingResult bindingResult, ModelMap modelMap, @RequestParam("image") MultipartFile file, Authentication authentication) throws IOException {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userDetails.getUser();
@@ -72,7 +72,7 @@ public class AddWorkerController {
                 e.printStackTrace();
             }
 
-            return "redirect:/hello";
+            return "redirect:/addWorker";
         }
     }
 }

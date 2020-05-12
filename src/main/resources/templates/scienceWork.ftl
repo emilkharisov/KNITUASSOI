@@ -80,7 +80,7 @@
     <form method="post" action="/addScienceWork">
         <br>
                     <label for="typeOfWork"><<font color="white">Тип работы</font>
-                        <select name="typeOfWork" id="typeOfWork" class="select-field" style="margin-left: 60px">
+                        <select name="typeOfWork" id="typeOfWork" class="select-field" style="margin-left: 120px">
                             <option disabled>Выберите тип</option>
                             <option value="Прогграмный продукт">Прогграмный продукт</option>
                             <option value="Патенты">Патенты</option>
@@ -90,11 +90,11 @@
                     </label>
 
                     <label for="nameOfWork"><font color="white">Название работы</font>
-                        <input class="input-field" style="margin-left: 30px" id="nameOfWork" name="nameOfWork">
+                        <input class="input-field" style="margin-left: 75px" id="nameOfWork" name="nameOfWork">
                     </label>
 
                     <label for="worker-list"><font color="white">Автор (Преподователь)</font>
-                    <input list="worker-list" name="worker">
+                    <input list="worker-list" name="worker" style="margin-left: 30px">
                     <datalist id="worker-list">
                         <option disabled>Выберите работника</option>
                         <#if workers ??>
@@ -105,7 +105,7 @@
                      </datalist>
                     </label>
                     <label for="student-list"><font color="white">Автор (Студент)</font>
-                    <input list="student-list" name="student">
+                    <input list="student-list" name="student" style="margin-left: 130px">
                     <datalist id="student-list">
                         <option disabled>Выберите студента</option>
                         <#if students ??>
@@ -116,23 +116,23 @@
                     </datalist>
                     </label>
                     <label for="nameOfJournal"><font color="white">Название журнала</font>
-                        <input class="input-field" style="margin-left: 23px" id="nameOfJournal" name="nameOfJournal">
+                        <input class="input-field" style="margin-left: 60px" id="nameOfJournal" name="nameOfJournal">
                     </label>
 
                     <label for="tom"><font color="white">Том</font>
-                        <input class="input-field" style="margin-left: 115px" id="tom" name="tom" maxlength="5">
+                        <input class="input-field" style="margin-left: 198px" id="tom" name="tom" maxlength="5">
                     </label>
 
                         <label for="pages"><font color="white">Страницы</font>
-                            <input class="input-field" style="margin-left: 75px" id="pages" name="pages" maxlength="5">
+                            <input class="input-field" style="margin-left: 137px" id="pages" name="pages" maxlength="5">
                         </label>
 
                         <label for="numberOfJournal"><font color="white">Номер журнала</font>
-                            <input class="input-field" style="margin-left: 40px" id="numberOfJournal" name="numberOfJournal" maxlength="5">
+                            <input class="input-field" style="margin-left: 85px" id="numberOfJournal" name="numberOfJournal" maxlength="5">
                         </label>
 
                             <label for="yearOfPublication"><font color="white">Год публикации</font>
-                                <input class="input-field" style="margin-left: 32px" id="yearOfPublication" name="yearOfPublication" maxlength="5">
+                                <input class="input-field" style="margin-left: 85px" id="yearOfPublication" name="yearOfPublication" maxlength="5">
                             </label>
 
                                 <label for="rinc"><font color="white">РИНЦ</font>
