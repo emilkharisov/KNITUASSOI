@@ -3,6 +3,7 @@ package ru.knitu.repo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import ru.knitu.model.EducationalWork;
 import ru.knitu.model.ScienceWork;
 import ru.knitu.model.Worker;
 
@@ -18,5 +19,15 @@ public interface ScienceWorkRepository extends JpaRepository<ScienceWork, Long> 
     List<ScienceWork> getPatentsList();
 
     List<ScienceWork> findAllByWorker(Worker worker);
+
+    List<ScienceWork> findAllByStudentIsNotNull();
+
+    List<ScienceWork> findAllByStudentIsNotNullAndYearOfPublication(int yearOfPublication);
+
+
+    @Query("SELECT s FROM ScienceWork s ORDER BY typeOfWork")
+    List<ScienceWork> findAllSorted();
+
+    List<ScienceWork> findAllByYearOfPublicationOrderByTypeOfWork(int year);
 
 }

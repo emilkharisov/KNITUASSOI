@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import ru.knitu.model.EducationalWork;
+import ru.knitu.model.ScienceWork;
 import ru.knitu.model.Worker;
 
 
@@ -29,5 +30,14 @@ public interface EducationalWorkRepisitory  extends JpaRepository<EducationalWor
     List<EducationalWork> getPatentsListBenefits();
 
     List<EducationalWork> findAllByWorker(Worker worker);
+
+    List<EducationalWork> findAllByStudentIsNotNull();
+
+    List<EducationalWork> findAllByStudentIsNotNullAndYearOfPublication(int yearOfPublication);
+
+    @Query("SELECT e FROM EducationalWork e ORDER BY typeOfWork")
+    List<EducationalWork> findAllSorted();
+
+    List<EducationalWork> findAllByYearOfPublicationOrderByTypeOfWork(int year);
 
 }

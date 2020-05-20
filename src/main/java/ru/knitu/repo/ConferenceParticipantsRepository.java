@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface ConferenceParticipantsRepository  extends JpaRepository<ConferenceParticipants, Long> {
     List<ConferenceParticipants> findAllByWorker(Worker worker);
+
 }

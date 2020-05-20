@@ -22,4 +22,8 @@ public interface WorkerRepository extends JpaRepository<Worker, Long> {
     Worker findByLastnameAndFirstnameAndThirdnameAndPosition(String lastname, String firstname, String thirdname, String position);
     Worker findByLastnameAndFirstnameAndThirdname(String lastname, String firstname, String thirdname);
 
+    List<Worker> findAllByQualificationDateBeforeOrQualificationDateIsNull(Date date);
+
+    List<Worker> findAllByQualificationDateAfter(Date date);
+
 }

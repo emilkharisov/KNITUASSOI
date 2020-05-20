@@ -209,7 +209,6 @@
                     <a class="dropdown-item" href="/qualification" style="font-size: 25px">Повышение квалификации</a>
                     <a class="dropdown-item" href="/addCandidateWork" style="font-size: 25px">Кандидатскую | Докторскую</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#" style="font-size: 25px">Something else here</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -220,14 +219,17 @@
                     <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподователей</a>
                     <a class="dropdown-item" href="/getExtractWorkListPage" style="font-size: 25px">Труды</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#" style="font-size: 25px">Something else here</a>
+                    <a class="dropdown-item" href="/getAddingsPage" style="font-size: 25px">Прочее</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
+                <a class="nav-link" href="/mailSender" style="font-size: 25px">Рассылка сообщений</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login" style="font-size: 25px">Логин</a>
+                <a class="nav-link" href="/getChatPage/54" style="font-size: 25px">Чат</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
             </li>
         </ul>
         <a class="navbar-brand" href="#" style="font-size: 18px">${login}</a>
