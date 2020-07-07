@@ -60,38 +60,48 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 25px">
                     Добавить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/hello">Преподователя</a>
-                    <a class="dropdown-item" href="/addEducationalWork">Учебный труд</a>
-                    <a class="dropdown-item" href="/addScienceWork">Научный труд</a>
+                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподавателя</a>
+                    <a class="dropdown-item" href="/addStudent" style="font-size: 25px">Cтудента</a>
+                    <a class="dropdown-item" href="/addEducationalWork" style="font-size: 25px">Учебный труд</a>
+                    <a class="dropdown-item" href="/addScienceWork" style="font-size: 25px">Научный труд</a>
+                    <a class="dropdown-item" href="/addConference" style="font-size: 25px">Конференцию</a>
+                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конференции</a>
+                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интеллектуальную собственность</a>
+                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интеллектуальной собственности</a>
+                    <a class="dropdown-item" href="/addQualification" style="font-size: 25px">Квалификацию</a>
+                    <a class="dropdown-item" href="/qualification" style="font-size: 25px">Повышение квалификации</a>
+                    <a class="dropdown-item" href="/addCandidateWork" style="font-size: 25px">Кандидатскую | Докторскую</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 25px">
                     Выгрузить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/getExtractListPage">Преподователей</a>
-                    <a class="dropdown-item" href="/getExtractWorkListPage">Труды</a>
+                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподавателей</a>
+                    <a class="dropdown-item" href="/getExtractWorkListPage" style="font-size: 25px">Труды</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/getAddingsPage" style="font-size: 25px">Прочее</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signUp">Регистрация</a>
+                <a class="nav-link" href="/mailSender" style="font-size: 25px">Рассылка сообщений</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login">Логин</a>
+                <a class="nav-link" href="/getChatPage/54" style="font-size: 25px">Чат</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
             </li>
         </ul>
-        <a class="navbar-brand" href="#">${login}</a>
+        <a class="navbar-brand" href="#" style="font-size: 18px">${login}</a>
         <a class="navbar-brand" href="#"><img src="/img/usersImg/${userImage}" height="80px" width="80px" class="round"></a>
-        <a class="nav-link" href="/logout">Выйти</a>
+        <a class="nav-link" href="/logout" style="font-size: 18px">Выйти</a>
     </div>
 </nav>
 <!-- NAVBAR -->
@@ -108,7 +118,7 @@
 
         <label for="typeOfDocument"><font color="white">Вид документа</font>
             <select name="typeOfDocument" style="margin-left: 120px" id="typeOfDocument" class="select-field" style="margin-left: 60px">
-                <option disabled>Выберите вид</option>
+                <option disabled selected>Выберите вид</option>
                 <option value="Патент">Патент</option>
                 <option value="Свидетельство о государственной регистрации">Свидетельство о государственной регистрации</option>
             </select>
@@ -116,7 +126,7 @@
 
         <label for="object"><font color="white">Объект</font>
             <select name="object" style="margin-left: 190px" id="object" class="select-field" style="margin-left: 60px">
-                <option disabled>Выберите объект</option>
+                <option disabled selected>Выберите объект</option>
                 <option value="полезная модель">Полезная модель</option>
                 <option value="Изобретение">Изобретение</option>
                 <option value="Промышленный образец">Промышленный образец</option>
@@ -154,7 +164,7 @@
             <input type="date" style="margin-left: 105px" id="dateOfExpiration" name="dateOfExpiration" class="data-field">
         </label>
 
-        <input type="submit" value="Отправить">
+        <input type="submit" value="Добавить">
     </form>
 </div>
 </body>

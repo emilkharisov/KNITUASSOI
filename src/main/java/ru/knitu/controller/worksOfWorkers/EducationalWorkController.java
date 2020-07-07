@@ -19,10 +19,6 @@ public class EducationalWorkController {
     @Autowired
     @Qualifier("addEducationalWorkServiceImpl")
     AddWorkService addWorkService;
-    @Autowired
-    WorkerRepository workerRepository;
-    @Autowired
-    StudentRepository studentRepository;
 
     @GetMapping("/addEducationalWork")
     public String getEducationalWorkPage(Authentication authentication, ModelMap modelMap) {
@@ -35,8 +31,6 @@ public class EducationalWorkController {
         else{modelMap.addAttribute("userImage", user.getImage()); }
         modelMap.addAttribute("login", user.getLogin());
 
-        modelMap.addAttribute("workers", workerRepository.findAll());
-        modelMap.addAttribute("students", studentRepository.findAll());
         return "educationalWork";
     }
 
@@ -51,8 +45,6 @@ public class EducationalWorkController {
         else{modelMap.addAttribute("userImage", user.getImage()); }
         modelMap.addAttribute("login", user.getLogin());
         //--------------------------------------------------------------
-        modelMap.addAttribute("workers", workerRepository.findAll());
-        modelMap.addAttribute("students", studentRepository.findAll());
         addWorkService.addWork(educationalWorkForm);
         return "educationalWork";
     }

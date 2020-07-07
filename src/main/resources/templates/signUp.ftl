@@ -80,6 +80,11 @@
                 alert("Неверный ключ")
             </script>
         </#if>
+        <#if error1??>
+            <script>
+                alert("Пользователь с таким логином существует")
+            </script>
+        </#if>
     </form>
 </div>
 

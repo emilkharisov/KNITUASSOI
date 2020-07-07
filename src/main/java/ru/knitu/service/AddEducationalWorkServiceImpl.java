@@ -24,29 +24,11 @@ public class AddEducationalWorkServiceImpl implements AddWorkService {
     @Override
     public void addWork(Object form) {
         EducationalWorkForm educationalWorkForm = (EducationalWorkForm) form;
-        Student student = null;
-        Worker worker = null;
 
-        Long studentLong = null;
-        Long workerLong = null;
-        if(!educationalWorkForm.getStudent().equals("")){
-            studentLong = Long.parseLong(educationalWorkForm.getStudent());
-        }
-        if(!educationalWorkForm.getWorker().equals("")){
-            workerLong = Long.parseLong(educationalWorkForm.getWorker());
-        }
 
-        if (studentLong != null){
-            student = studentRepository.findById(studentLong);
-        }
-        if (workerLong != null){
-            worker = workerRepository.findById(workerLong);
-        }
         EducationalWork educationalWork = EducationalWork.builder()
                         .typeOfWork(educationalWorkForm.getTypeOfWork())
                         .nameOfWork(educationalWorkForm.getNameOfWork())
-                        .worker(worker)
-                        .student(student)
                         .amountOfPages(educationalWorkForm.getAmountOfPages())
                         .yearOfPublication(educationalWorkForm.getYearOfPublication())
                         .publishing(educationalWorkForm.getPublishing())

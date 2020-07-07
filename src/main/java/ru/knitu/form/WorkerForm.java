@@ -66,19 +66,19 @@ public class WorkerForm {
     private String highNumber;
     private String highSeria;
     private String highYear;
-    private String highOrganiation;
+    private String highOrganisation;
     //Avg Education
     private String avDirection;
     private String avSpec;
     private String avNumber;
     private String avSeria;
     private String avYear;
-    private String avOrganiation;
+    private String avOrganisation;
     //Begin Education
     private String begDirection;
     private String begSpec;
     private String begNumber;
     private String begSeria;
     private String begYear;
-    private String begOrganiation;
+    private String begOrganisation;
 }

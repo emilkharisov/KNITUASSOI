@@ -29,15 +29,11 @@ public interface EducationalWorkRepisitory  extends JpaRepository<EducationalWor
     @Query("SELECT e FROM EducationalWork e WHERE typeOfWork='Учебные пособия'")
     List<EducationalWork> getPatentsListBenefits();
 
-    List<EducationalWork> findAllByWorker(Worker worker);
-
-    List<EducationalWork> findAllByStudentIsNotNull();
-
-    List<EducationalWork> findAllByStudentIsNotNullAndYearOfPublication(int yearOfPublication);
-
     @Query("SELECT e FROM EducationalWork e ORDER BY typeOfWork")
     List<EducationalWork> findAllSorted();
 
     List<EducationalWork> findAllByYearOfPublicationOrderByTypeOfWork(int year);
+
+    EducationalWork findById(long id);
 
 }

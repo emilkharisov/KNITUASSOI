@@ -8,9 +8,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.knitu.model.Conference;
-import ru.knitu.model.ConferenceParticipants;
-import ru.knitu.model.User;
+import ru.knitu.model.*;
 import ru.knitu.repo.ConferenceParticipantsRepository;
 import ru.knitu.repo.ConferenceRepository;
 import ru.knitu.repo.StudentRepository;
@@ -18,6 +16,7 @@ import ru.knitu.repo.WorkerRepository;
 import ru.knitu.security.details.UserDetailsImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class ConferenceParticipantsController {
@@ -76,28 +75,39 @@ public class ConferenceParticipantsController {
             return "confParticipants";
         }
 
-        ConferenceParticipants conferenceParticipants = new ConferenceParticipants();
-        String conferenceName = conferences.split("\\|")[0];
-        String conferenceDate = conferences.split("\\|")[1];
+        List <Worker>  listWorkers = new ArrayList<>();
+        List <Student>  listStudents = new ArrayList<>();
 
-
-        conferenceParticipants.setConference_id(conferenceRepository.findOneByNameAndDateOfStartShow(conferenceName, conferenceDate).getId());
         if(!workers.equals("")){
-            String firstName = workers.split("\\|")[1];
-            String lastName = workers.split("\\|")[0];
-            String thirdName = workers.split("\\|")[2];
-            String position = workers.split("\\|")[3];
-            conferenceParticipants.setWorker(workerRepository.findByLastnameAndFirstnameAndThirdnameAndPosition(lastName, firstName, thirdName, position));
+            String [] workersId = workers.split("#");
+
+            for(int i=0; i<workersId.length; i++){
+                listWorkers.add(workerRepository.findById(Long.parseLong(workersId[i])));
+            }
         }
 
         if(!students.equals("")){
-            String firstName = students.split("\\|")[1];
-            String lastName = students.split("\\|")[0];
-            String thirdName = students.split("\\|")[2];
-            String group = students.split("\\|")[3];
-            conferenceParticipants.setStudent(studentRepository.findByLastnameAndFirstnameAndThirdnameAndEducationGroup(lastName,firstName,thirdName,group));
+            String [] studentsId = students.split("#");
+
+            for(int i=0; i<studentsId.length; i++){
+                listStudents.add(studentRepository.findById(Long.parseLong(studentsId[i])));
+            }
         }
-        conferenceParticipantsRepository.save(conferenceParticipants);
+
+        for(Worker worker : listWorkers){
+            ConferenceParticipants conferenceParticipants = new ConferenceParticipants();
+            conferenceParticipants.setWorker(worker);
+            conferenceParticipants.setConference_id(Long.parseLong(conferences));
+            conferenceParticipantsRepository.save(conferenceParticipants);
+        }
+
+        for (Student student : listStudents){
+            ConferenceParticipants conferenceParticipants = new ConferenceParticipants();
+            conferenceParticipants.setStudent(student);
+            conferenceParticipants.setConference_id(Long.parseLong(conferences));
+            conferenceParticipantsRepository.save(conferenceParticipants);
+        }
+
         return "confParticipants";
     }
 }

@@ -48,38 +48,48 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 25px">
                     Добавить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/hello">Преподователя</a>
-                    <a class="dropdown-item" href="/addEducationalWork">Учебный труд</a>
-                    <a class="dropdown-item" href="/addScienceWork">Научный труд</a>
+                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподавателей</a>
+                    <a class="dropdown-item" href="/addStudent" style="font-size: 25px">Cтудента</a>
+                    <a class="dropdown-item" href="/addEducationalWork" style="font-size: 25px">Учебный труд</a>
+                    <a class="dropdown-item" href="/addScienceWork" style="font-size: 25px">Научный труд</a>
+                    <a class="dropdown-item" href="/addConference" style="font-size: 25px">Конференцию</a>
+                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конференции</a>
+                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интеллектуальную собственность</a>
+                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интеллектуальной собственности</a>
+                    <a class="dropdown-item" href="/addQualification" style="font-size: 25px">Квалификацию</a>
+                    <a class="dropdown-item" href="/qualification" style="font-size: 25px">Повышение квалификации</a>
+                    <a class="dropdown-item" href="/addCandidateWork" style="font-size: 25px">Кандидатскую | Докторскую</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 25px">
                     Выгрузить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/getExtractListPage">Преподователей</a>
-                    <a class="dropdown-item" href="/getExtractWorkListPage">Труды</a>
+                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподавателей</a>
+                    <a class="dropdown-item" href="/getExtractWorkListPage" style="font-size: 25px">Труды</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/getAddingsPage" style="font-size: 25px">Прочее</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signUp">Регистрация</a>
+                <a class="nav-link" href="/mailSender" style="font-size: 25px">Рассылка сообщений</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login">Логин</a>
+                <a class="nav-link" href="/getChatPage/54" style="font-size: 25px">Чат</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
             </li>
         </ul>
-        <a class="navbar-brand" href="#">${login}</a>
+        <a class="navbar-brand" href="#" style="font-size: 18px">${login}</a>
         <a class="navbar-brand" href="#"><img src="/img/usersImg/${userImage}" height="80px" width="80px" class="round"></a>
-        <a class="nav-link" href="/logout">Выйти</a>
+        <a class="nav-link" href="/logout" style="font-size: 18px">Выйти</a>
     </div>
 </nav>
 <!-- NAVBAR -->
@@ -96,49 +106,57 @@
         <input type="submit" value="Поиск">
         <br>
         <br>
-        <h2>Научные работы</h2>
-        <table style="margin-top: 50px" align="center" class="table" id="table1">
-            <tr>
-                <th class="th">Имя</th>
-                <th class="th">Фамилия</th>
-                <th class="th">Телефон</th>
-                <th class="th">Группа</th>
-                <th class="th">Название работы</th>
-                <th class="th">Тип работы</th>
-            </tr>
-            <#list science as sc>
+        <#if educational ??>
+        <h1><b>Учебные работы</b></h1>
+        <#list educational as key, value>
+            <br>
+            <h2>${key.getNameOfWork()} ${key.getTypeOfWork()} ${key.getYearOfPublication()} ${key.getPublishing()}</h2>
+            <table style="margin-top: 50px" align="center" class="table">
                 <tr>
-                    <td class="td">${sc.getStudent().getFirstname()}</td>
-                    <td class="td">${sc.getStudent().getLastname()}</td>
-                    <td class="td">${sc.getStudent().getTelephone()}</td>
-                    <td class="td">${sc.getStudent().getEducationGroup()}</td>
-                    <td class="td">${sc.getNameOfWork()}</td>
-                    <td class="td">${sc.getTypeOfWork()}</td>
+                    <th class="th">Имя</th>
+                    <th class="th">Фамилия</th>
+                    <th class="th">Телефон</th>
+                    <th class="th">Уч. группа</th>
+                    <th class="th">Форма обучения</th>
                 </tr>
-            </#list>
-        </table>
+                <#list value as val>
+                    <tr>
+                        <td class="td">${val.getFirstname()}</td>
+                        <td class="td">${val.getLastname()}</td>
+                        <td class="td">${val.getTelephone()}</td>
+                        <td class="td">${val.getEducationGroup()}</td>
+                        <td class="td">${val.getFormOfEducation()}</td>
+                    </tr>
+                </#list>
+            </table>
+        </#list>
+        </#if>
         <br>
-        <h2>Учебные работы</h2>
-        <table style="margin-top: 50px" align="center" class="table" id="table2">
-            <tr>
-                <th class="th">Имя</th>
-                <th class="th">Фамилия</th>
-                <th class="th">Телефон</th>
-                <th class="th">Группа</th>
-                <th class="th">Название работы</th>
-                <th class="th">Тип работы</th>
-            </tr>
-            <#list educational as edu>
+        <#if science ??>
+            <h1><b>Научные работы</b></h1>
+        <#list science as key, value>
+            <br>
+            <h2>${key.getNameOfWork()} ${key.getTypeOfWork()} ${key.getYearOfPublication()}</h2>
+            <table style="margin-top: 50px" align="center" class="table">
                 <tr>
-                    <td class="td">${edu.getStudent().getFirstname()}</td>
-                    <td class="td">${edu.getStudent().getLastname()}</td>
-                    <td class="td">${edu.getStudent().getTelephone()}</td>
-                    <td class="td">${edu.getStudent().getEducationGroup()}</td>
-                    <td class="td">${edu.getNameOfWork()}</td>
-                    <td class="td">${edu.getTypeOfWork()}</td>
+                    <th class="th">Имя</th>
+                    <th class="th">Фамилия</th>
+                    <th class="th">Телефон</th>
+                    <th class="th">Уч. группа</th>
+                    <th class="th">Форма обучения</th>
                 </tr>
-            </#list>
-        </table>
+                <#list value as val>
+                    <tr>
+                        <td class="td">${val.getFirstname()}</td>
+                        <td class="td">${val.getLastname()}</td>
+                        <td class="td">${val.getTelephone()}</td>
+                        <td class="td">${val.getEducationGroup()}</td>
+                        <td class="td">${val.getFormOfEducation()}</td>
+                    </tr>
+                </#list>
+            </table>
+        </#list>
+        </#if>
     </form>
 </div>
 </body>

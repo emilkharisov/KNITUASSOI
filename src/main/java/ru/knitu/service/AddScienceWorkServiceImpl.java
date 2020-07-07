@@ -24,14 +24,6 @@ public class AddScienceWorkServiceImpl implements AddWorkService {
     public void addWork(Object form) {
         ScienceWorkForm scienceWorkForm = (ScienceWorkForm) form;
 
-        Student student = null;
-        Worker worker = null;
-        if (!scienceWorkForm.getStudent().equals("")){
-            student = studentRepository.findById(Long.parseLong(scienceWorkForm.getStudent()));
-        }
-        if (!scienceWorkForm.getWorker().equals("")){
-            worker =workerRepository.findById(Long.parseLong(scienceWorkForm.getWorker()));
-        }
 
         ScienceWork scienceWork = ScienceWork.builder()
                 .typeOfWork(scienceWorkForm.getTypeOfWork())
@@ -43,8 +35,6 @@ public class AddScienceWorkServiceImpl implements AddWorkService {
                 .scopus(scienceWorkForm.isScopus())
                 .yearOfPublication(scienceWorkForm.getYearOfPublication())
                 .tom(scienceWorkForm.getTom())
-                .worker(worker)
-                .student(student)
                 .build();
         scienceWorkRepository.save(scienceWork);
     }

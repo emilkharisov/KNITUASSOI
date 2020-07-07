@@ -69,18 +69,12 @@ public class RelatingQualificationController {
 
         IncreaseQualification increaseQualification=null;
         if(!qualification.equals("")) {
-            String qualificationProgramm = qualification.split("\\|")[0];
-            String qualificationDateOfEdn = qualification.split("\\|")[1];
-            increaseQualification = qualificationRepository.findByProgrammAndDateOfEndShow(qualificationProgramm, qualificationDateOfEdn);
+            increaseQualification = qualificationRepository.findById(Long.parseLong(qualification));
         }
 
         Worker worker=null;
         if(!workers.equals("")){
-            String firstName = workers.split("\\|")[1];
-            String lastName = workers.split("\\|")[0];
-            String thirdName = workers.split("\\|")[2];
-            String position = workers.split("\\|")[3];
-           worker = workerRepository.findByLastnameAndFirstnameAndThirdnameAndPosition(lastName, firstName, thirdName, position);
+           worker = workerRepository.findById(Long.parseLong(workers));
         }
 
         if (increaseQualification != null && worker != null){

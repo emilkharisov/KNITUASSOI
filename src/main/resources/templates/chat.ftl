@@ -1,6 +1,8 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 <!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
@@ -231,6 +233,11 @@
                 margin-bottom: 15px !important;
             }
         }
+        .round {
+            border-radius: 100px; /* Радиус скругления */
+            border: 3px solid gray; /* Параметры рамки */
+            box-shadow: 0 0 7px #666; /* Параметры тени */
+        }
     </style>
     <title>Chat</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -238,6 +245,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" color="white">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
 
             function ajaxCall(){
@@ -289,14 +301,14 @@
                     Добавить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподователя</a>
+                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподавателя</a>
                     <a class="dropdown-item" href="/addStudent" style="font-size: 25px">Cтудента</a>
                     <a class="dropdown-item" href="/addEducationalWork" style="font-size: 25px">Учебный труд</a>
                     <a class="dropdown-item" href="/addScienceWork" style="font-size: 25px">Научный труд</a>
                     <a class="dropdown-item" href="/addConference" style="font-size: 25px">Конференцию</a>
-                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конферренции</a>
-                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интелектуальную собственность</a>
-                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интелектуальной собственности</a>
+                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конференции</a>
+                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интеллектуальную собственность</a>
+                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интеллектуальной собственности</a>
                     <a class="dropdown-item" href="/addQualification" style="font-size: 25px">Квалификацию</a>
                     <a class="dropdown-item" href="/qualification" style="font-size: 25px">Повышение квалификации</a>
                     <a class="dropdown-item" href="/addCandidateWork" style="font-size: 25px">Кандидатскую | Докторскую</a>
@@ -308,20 +320,24 @@
                     Выгрузить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподователей</a>
+                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподавателей</a>
                     <a class="dropdown-item" href="/getExtractWorkListPage" style="font-size: 25px">Труды</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/getAddingsPage" style="font-size: 25px">Прочее</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
+                <a class="nav-link" href="/mailSender" style="font-size: 25px">Рассылка сообщений</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login" style="font-size: 25px">Логин</a>
+                <a class="nav-link" href="/getChatPage/54" style="font-size: 25px">Чат</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
             </li>
         </ul>
-        <a class="navbar-brand" href="#" style="font-size: 18px">логин</a>
+        <a class="navbar-brand" href="#" style="font-size: 18px">${login}</a>
+        <a class="navbar-brand" href="#"><img src="/img/usersImg/${userImage}" height="80px" width="80px" class="round"></a>
         <a class="nav-link" href="/logout" style="font-size: 18px">Выйти</a>
     </div>
 </nav>
@@ -340,6 +356,7 @@
                 <div class="card-body contacts_body">
                     <ui class="contacts">
                         <#list users as user>
+                            <#if user!=currentUser>
                             <li>
                                 <div class="d-flex bd-highlight">
                                     <div class="img_cont">
@@ -354,6 +371,7 @@
                                     </div>
                                 </div>
                             </li>
+                            </#if>
                         </#list>
                     </ui>
                 </div>
@@ -395,7 +413,7 @@
                         <#else>
                             <div class="d-flex justify-content-start mb-4">
                                 <div class="img_cont_msg">
-                                    <#if userPath??>
+                                    <#if userPath.getImage()??>
                                         <img src="/img/usersImg/${userPath.getImage()}" class="rounded-circle user_img_msg">
                                     <#else>
                                         <img src="/img/usersImg/logo1.png" class="rounded-circle user_img_msg">

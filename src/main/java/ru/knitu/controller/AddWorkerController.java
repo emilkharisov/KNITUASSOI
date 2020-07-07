@@ -34,11 +34,11 @@ public class AddWorkerController {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userDetails.getUser();
         String userImage = user.getImage();
-        modelMap.addAttribute("userImage", ControllerUtils.setUserImage(userImage));
-        modelMap.addAttribute("name", user.getLogin());
-        modelMap.addAttribute("image", user.getImage());
-        modelMap.addAttribute("im", uploadPath3);
-        modelMap.addAttribute("login", user.getLogin());
+        if(userImage==null || userImage.length()==0){
+            modelMap.addAttribute("userImage", "logo1.png");
+        }
+        else{modelMap.addAttribute("userImage", user.getImage()); }
+        modelMap.addAttribute("login",user.getLogin());
         return "addWorker";
     }
 
@@ -48,8 +48,11 @@ public class AddWorkerController {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         User user = userDetails.getUser();
         String userImage = user.getImage();
-        modelMap.addAttribute("userImage", ControllerUtils.setUserImage(userImage));
-        modelMap.addAttribute("login", user.getLogin());
+        if(userImage==null || userImage.length()==0){
+            modelMap.addAttribute("userImage", "logo1.png");
+        }
+        else{modelMap.addAttribute("userImage", user.getImage()); }
+        modelMap.addAttribute("login",user.getLogin());
 
         if (bindingResult.hasErrors()) {
             modelMap.addAllAttributes(ControllerUtils.getErrors(bindingResult));

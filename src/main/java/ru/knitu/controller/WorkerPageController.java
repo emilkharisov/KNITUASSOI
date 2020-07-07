@@ -51,6 +51,11 @@ public class WorkerPageController {
     ScienceWorkRepository scienceWorkRepository;
     @Autowired
     IntellectualPropertyAuthorsRepository intellectualPropertyAuthorsRepository;
+    @Autowired
+    EduWorkAuthorsRepository eduWorkAuthorsRepository;
+    @Autowired
+    ScWorkAuthorsRepository scWorkAuthorsRepository;
+
 
     @GetMapping("/getWorkerPage/{worker}")
     public String getWorkerPage(Authentication authentication, ModelMap modelMap, @PathVariable Worker worker){
@@ -158,13 +163,23 @@ public class WorkerPageController {
             modelMap.addAttribute("increaseQualificationList", increaseQualificationList);
         }
 
-        List<EducationalWork> educationalWorkList = educationalWorkRepisitory.findAllByWorker(worker);
+        List<EducationalWork> educationalWorkList = new ArrayList<>();
+
+        for(EducationalWorkAuthors educationalWorkAuthors : eduWorkAuthorsRepository.findAllByWorker(worker)){
+            educationalWorkList.add(educationalWorkAuthors.getEducationalWork());
+        }
+
         if(!educationalWorkList.isEmpty()){
             modelMap.addAttribute("educational", true);
             modelMap.addAttribute("educationalWorkList", educationalWorkList);
         }
 
-        List<ScienceWork> scienceWorkList  = scienceWorkRepository.findAllByWorker(worker);
+        List<ScienceWork> scienceWorkList  = new ArrayList<>();
+
+        for(ScienceWorkAuthors scienceWorkAuthors : scWorkAuthorsRepository.findAllByWorker(worker)){
+            scienceWorkList.add(scienceWorkAuthors.getScienceWork());
+        }
+
         if(!scienceWorkList.isEmpty()){
             modelMap.addAttribute("science", true);
             modelMap.addAttribute("scienceWorkList", scienceWorkList);
@@ -338,12 +353,12 @@ public class WorkerPageController {
             conferenceParticipantsRepository.delete(conferenceParticipants);
         }
         // Delete Educational work
-        for(EducationalWork educationalWork : educationalWorkRepisitory.findAllByWorker(worker)){
-            educationalWorkRepisitory.delete(educationalWork);
+        for(EducationalWorkAuthors educationalWorkAuthors : eduWorkAuthorsRepository.findAllByWorker(worker)){
+            eduWorkAuthorsRepository.delete(educationalWorkAuthors);
         }
         // Delete Science work
-        for(ScienceWork scienceWork : scienceWorkRepository.findAllByWorker(worker)){
-            scienceWorkRepository.delete(scienceWork);
+        for(ScienceWorkAuthors scienceWorkAuthors : scWorkAuthorsRepository.findAllByWorker(worker)){
+            scWorkAuthorsRepository.delete(scienceWorkAuthors);
         }
         // Delete IntellectualPropertyAuthors
         for(IntellectualPropertyAuthors intellectualPropertyAuthors : intellectualPropertyAuthorsRepository.findAllByWorker(worker)){

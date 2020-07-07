@@ -2,7 +2,7 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Добавить преподователя</title>
+    <title>Добавить преподавателя</title>
     <meta name="description" content="Описание страницы" />
     <link href="/css/styles.css" rel="stylesheet" type="text/css">
     <style>
@@ -135,11 +135,18 @@
                     Добавить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/hello" style="font-size: 25px">Преподователя</a>
+                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподавателя</a>
+                    <a class="dropdown-item" href="/addStudent" style="font-size: 25px">Cтудента</a>
                     <a class="dropdown-item" href="/addEducationalWork" style="font-size: 25px">Учебный труд</a>
                     <a class="dropdown-item" href="/addScienceWork" style="font-size: 25px">Научный труд</a>
+                    <a class="dropdown-item" href="/addConference" style="font-size: 25px">Конференцию</a>
+                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конференции</a>
+                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интеллектуальную собственность</a>
+                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интеллектуальной собственности</a>
+                    <a class="dropdown-item" href="/addQualification" style="font-size: 25px">Квалификацию</a>
+                    <a class="dropdown-item" href="/qualification" style="font-size: 25px">Повышение квалификации</a>
+                    <a class="dropdown-item" href="/addCandidateWork" style="font-size: 25px">Кандидатскую | Докторскую</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -147,28 +154,32 @@
                     Выгрузить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподователей</a>
+                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподавателей</a>
                     <a class="dropdown-item" href="/getExtractWorkListPage" style="font-size: 25px">Труды</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/getAddingsPage" style="font-size: 25px">Прочее</a>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/mailSender" style="font-size: 25px">Рассылка сообщений</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/getChatPage/54" style="font-size: 25px">Чат</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login" style="font-size: 25px">Логин</a>
-            </li>
         </ul>
-        <a class="navbar-brand" href="#">${login}</a>
+        <a class="navbar-brand" href="#" style="font-size: 18px">${login}</a>
         <a class="navbar-brand" href="#"><img src="/img/usersImg/${userImage}" height="80px" width="80px" class="round"></a>
-        <a class="nav-link" href="/logout">Выйти</a>
+        <a class="nav-link" href="/logout" style="font-size: 18px">Выйти</a>
     </div>
 </nav>
 <!-- NAVBAR -->
+
 <hr>
 <div class="form-style-2-heading">
-    <font color="white">Добавьте преподователя</font>
+    <font color="white">Добавьте преподавателя</font>
 </div>
 <hr>
 <div class="form-style-2" id="block" align="center">
@@ -205,7 +216,7 @@
                             <hr>
                             <label for="hiringConditionOfWorker">Условие найма</label>
                             <select name="hiringConditionOfWorker" id="hiringConditionOfWorker" class="select-field">
-                                <option disabled>Выберите условие найма</option>
+                                <option disabled selected>Выберите условие найма</option>
                                 <option value="Штатное">Штатное</option>
                                 <option value="Внешняя совместимость">Внешняя совместимость</option>
                                 <option value="Внутреняя совместимость">Внутреняя совместимость</option>
@@ -221,7 +232,7 @@
 
                             <label for="education">Образование</label>
                                 <select name="education" id="education" class="select-field">
-                                    <option disabled>Выберите образование</option>
+                                    <option disabled selected>Выберите образование</option>
                                     <option value="Высшее">Высшее</option>
                                     <option value="Среднее">Среднее</option>
                                 </select>
@@ -230,7 +241,7 @@
 
                             <label for="position">Должность</label>
                                 <select name="position" id="position" class="select-field">
-                                    <option disabled>Выберите должность</option>
+                                    <option disabled selected>Выберите должность</option>
                                     <option value="Заведующий кафедрой">Заведующий кафедрой</option>
                                     <option value="Профессор">Профессор</option>
                                     <option value="Доцент">Доцент</option>
@@ -247,7 +258,7 @@
 
                             <label for="academicRank">Учебное звание</label>
                                 <select name="academicRank" id="academicRank" class="select-field">
-                                    <option disabled>Выберите учебное звание</option>
+                                    <option disabled selected>Выберите учебное звание</option>
                                     <option value="Профессор">Профессор</option>
                                     <option value="Доцент">Доцент</option>
                                 </select>
@@ -255,7 +266,7 @@
 
                             <label for="academicDegree">Учебная степень</label>
                                 <select name="academicDegree" id="academicDegree" class="select-field">
-                                    <option disabled>Выберите учебную степень</option>
+                                    <option disabled selected>Выберите учебную степень</option>
                                     <option value="Доктор технических наук (д.т.н.)">Доктор технических наук (д.т.н.)</option>
                                     <option value="Доктор педагогических наук (д.пед.н.)">Доктор педагогических наук (д.пед.н.)</option>
                                     <option value="Доктор физико-математических наук (д.ф.-м.н.)">Доктор физико-математических наук (д.ф.-м.н.)</option>
@@ -351,7 +362,7 @@
                             <input type="file" name="image">
                              <hr>
 
-                            <input type="submit" value="Отправить">
+                            <input type="submit" value="Добавить">
     </form>
 </div>
 </body>

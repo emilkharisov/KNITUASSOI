@@ -197,14 +197,16 @@
                     Добавить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподователя</a>
+                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподавателя</a>
                     <a class="dropdown-item" href="/addStudent" style="font-size: 25px">Cтудента</a>
                     <a class="dropdown-item" href="/addEducationalWork" style="font-size: 25px">Учебный труд</a>
+                    <a class="dropdown-item" href="/addEducationalWorkAuthors" style="font-size: 25px">Авторов учебных трудов</a>
                     <a class="dropdown-item" href="/addScienceWork" style="font-size: 25px">Научный труд</a>
+                    <a class="dropdown-item" href="/addScinceWorkAuthors" style="font-size: 25px">Авторов научных трудов</a>
                     <a class="dropdown-item" href="/addConference" style="font-size: 25px">Конференцию</a>
-                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конферренции</a>
-                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интелектуальную собственность</a>
-                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интелектуальной собственности</a>
+                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конференции</a>
+                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интеллектуальную собственность</a>
+                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интеллектуальной собственности</a>
                     <a class="dropdown-item" href="/addQualification" style="font-size: 25px">Квалификацию</a>
                     <a class="dropdown-item" href="/qualification" style="font-size: 25px">Повышение квалификации</a>
                     <a class="dropdown-item" href="/addCandidateWork" style="font-size: 25px">Кандидатскую | Докторскую</a>
@@ -216,7 +218,7 @@
                     Выгрузить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподователей</a>
+                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподавателей</a>
                     <a class="dropdown-item" href="/getExtractWorkListPage" style="font-size: 25px">Труды</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/getAddingsPage" style="font-size: 25px">Прочее</a>

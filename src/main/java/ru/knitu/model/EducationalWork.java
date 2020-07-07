@@ -19,13 +19,6 @@ public class EducationalWork {
     private Long id;
     private String typeOfWork;
     private String nameOfWork;
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "worker_id")
-    private Worker worker;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "student_id")
-    private Student student;
     private int amountOfPages;
     private int yearOfPublication;
     private String publishing;

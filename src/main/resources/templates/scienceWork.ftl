@@ -36,38 +36,48 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 25px">
                     Добавить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/hello">Преподователя</a>
-                    <a class="dropdown-item" href="/addEducationalWork">Учебный труд</a>
-                    <a class="dropdown-item" href="/addScienceWork">Научный труд</a>
+                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподавателя</a>
+                    <a class="dropdown-item" href="/addStudent" style="font-size: 25px">Cтудента</a>
+                    <a class="dropdown-item" href="/addEducationalWork" style="font-size: 25px">Учебный труд</a>
+                    <a class="dropdown-item" href="/addScienceWork" style="font-size: 25px">Научный труд</a>
+                    <a class="dropdown-item" href="/addConference" style="font-size: 25px">Конференцию</a>
+                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конференции</a>
+                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интеллектуальную собственность</a>
+                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интеллектуальной собственности</a>
+                    <a class="dropdown-item" href="/addQualification" style="font-size: 25px">Квалификацию</a>
+                    <a class="dropdown-item" href="/qualification" style="font-size: 25px">Повышение квалификации</a>
+                    <a class="dropdown-item" href="/addCandidateWork" style="font-size: 25px">Кандидатскую | Докторскую</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 25px">
                     Выгрузить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/getExtractListPage">Преподователей</a>
-                    <a class="dropdown-item" href="/getExtractWorkListPage">Труды</a>
+                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподавателей</a>
+                    <a class="dropdown-item" href="/getExtractWorkListPage" style="font-size: 25px">Труды</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/getAddingsPage" style="font-size: 25px">Прочее</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signUp">Регистрация</a>
+                <a class="nav-link" href="/mailSender" style="font-size: 25px">Рассылка сообщений</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login">Логин</a>
+                <a class="nav-link" href="/getChatPage/54" style="font-size: 25px">Чат</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
             </li>
         </ul>
-        <a class="navbar-brand" href="#">${login}</a>
+        <a class="navbar-brand" href="#" style="font-size: 18px">${login}</a>
         <a class="navbar-brand" href="#"><img src="/img/usersImg/${userImage}" height="80px" width="80px" class="round"></a>
-        <a class="nav-link" href="/logout">Выйти</a>
+        <a class="nav-link" href="/logout" style="font-size: 18px">Выйти</a>
     </div>
 </nav>
 <!-- NAVBAR -->
@@ -75,14 +85,14 @@
 
 <div class="form-style-2">
     <div class="form-style-2-heading"><font color="white">
-            Добавьте научнцю работу
+            Добавьте научную работу
         </font></div>
     <form method="post" action="/addScienceWork">
         <br>
-                    <label for="typeOfWork"><<font color="white">Тип работы</font>
-                        <select name="typeOfWork" id="typeOfWork" class="select-field" style="margin-left: 120px">
-                            <option disabled>Выберите тип</option>
-                            <option value="Прогграмный продукт">Прогграмный продукт</option>
+                    <label for="typeOfWork"><font color="white">Тип работы</font>
+                        <select name="typeOfWork" id="typeOfWork" class="select-field" style="margin-left: 130px">
+                            <option disabled selected>Выберите тип</option>
+                            <option value="Програмный продукт">Программный продукт</option>
                             <option value="Патенты">Патенты</option>
                             <option value="Монографии">Монографии</option>
                             <option value="Статьи">Статьи</option>
@@ -93,46 +103,24 @@
                         <input class="input-field" style="margin-left: 75px" id="nameOfWork" name="nameOfWork">
                     </label>
 
-                    <label for="worker-list"><font color="white">Автор (Преподователь)</font>
-                    <input list="worker-list" name="worker" style="margin-left: 30px">
-                    <datalist id="worker-list">
-                        <option disabled>Выберите работника</option>
-                        <#if workers ??>
-                            <#list workers as worker>
-                                <option value=${worker.getId()}>${worker.getLastname()} ${worker.getFirstname()} ${worker.getThirdname()} ${worker.getPosition()}</option>
-                            </#list>
-                        </#if>
-                     </datalist>
-                    </label>
-                    <label for="student-list"><font color="white">Автор (Студент)</font>
-                    <input list="student-list" name="student" style="margin-left: 130px">
-                    <datalist id="student-list">
-                        <option disabled>Выберите студента</option>
-                        <#if students ??>
-                            <#list students as student>
-                                <option value=${student.getId()}>${student.getLastname()} ${student.getFirstname()} ${student.getThirdname()} ${student.getEducationGroup()}</option>
-                            </#list>
-                        </#if>
-                    </datalist>
-                    </label>
                     <label for="nameOfJournal"><font color="white">Название журнала</font>
-                        <input class="input-field" style="margin-left: 60px" id="nameOfJournal" name="nameOfJournal">
+                        <input class="input-field" style="margin-left: 63px" id="nameOfJournal" name="nameOfJournal">
                     </label>
 
                     <label for="tom"><font color="white">Том</font>
-                        <input class="input-field" style="margin-left: 198px" id="tom" name="tom" maxlength="5">
+                        <input class="input-field" style="margin-left: 201px" id="tom" name="tom" maxlength="5">
                     </label>
 
                         <label for="pages"><font color="white">Страницы</font>
-                            <input class="input-field" style="margin-left: 137px" id="pages" name="pages" maxlength="5">
+                            <input class="input-field" style="margin-left: 141px" id="pages" name="pages" maxlength="5">
                         </label>
 
                         <label for="numberOfJournal"><font color="white">Номер журнала</font>
-                            <input class="input-field" style="margin-left: 85px" id="numberOfJournal" name="numberOfJournal" maxlength="5">
+                            <input class="input-field" style="margin-left: 89px" id="numberOfJournal" name="numberOfJournal" maxlength="5">
                         </label>
 
                             <label for="yearOfPublication"><font color="white">Год публикации</font>
-                                <input class="input-field" style="margin-left: 85px" id="yearOfPublication" name="yearOfPublication" maxlength="5">
+                                <input class="input-field" style="margin-left: 89px" id="yearOfPublication" name="yearOfPublication" maxlength="5">
                             </label>
 
                                 <label for="rinc"><font color="white">РИНЦ</font>
@@ -142,7 +130,7 @@
                                 <label for="scopus"><font color="white">SCOPUS</font>
                                     <input type="checkbox" id="scopus" name="scopus" style="zoom: 1.5">
                                 </label>
-                                    <input type="submit" value="Отправить">
+                                    <input type="submit" value="Добавить">
     </form>
 </div>
 </body>

@@ -64,7 +64,7 @@ public class AddWorkerServiceImpl implements AddWorkerService {
             highNumber = workerForm.getHighNumber();
             highSeria = workerForm.getHighSeria();
             highYear = workerForm.getHighYear();
-            highOrganiation = workerForm.getHighOrganiation();
+            highOrganiation = workerForm.getHighOrganisation();
             highEducationInfo = highDirection + "#" + highSpec + "#" + highNumber + "#" + highSeria + "#" + highYear + "#" + highOrganiation;
         }
         if (workerFormOptional1.isPresent()){
@@ -73,7 +73,7 @@ public class AddWorkerServiceImpl implements AddWorkerService {
             avNumber = workerForm.getAvNumber();
             avSeria = workerForm.getAvSeria();
             avYear = workerForm.getAvYear();
-            avOrganiation = workerForm.getAvOrganiation();
+            avOrganiation = workerForm.getAvOrganisation();
             avgEducationInfo = avDirection + "#" + avSpec + "#" + avNumber + "#" + avSeria + "#" + avYear + "#" + avOrganiation;
         }
         if (workerFormOptional2.isPresent()){
@@ -82,7 +82,7 @@ public class AddWorkerServiceImpl implements AddWorkerService {
             begNumber = workerForm.getBegNumber();
             begSeria = workerForm.getBegSeria();
             begYear = workerForm.getBegYear();
-            begOrganiation = workerForm.getBegOrganiation();
+            begOrganiation = workerForm.getBegDirection();
             begEducationInfo = begDirection + "#" + begSpec + "#" + begNumber + "#" + begSeria + "#" + begYear + "#" + begOrganiation;
         }
 

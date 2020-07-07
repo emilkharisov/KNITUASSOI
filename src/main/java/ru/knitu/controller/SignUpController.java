@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import ru.knitu.form.UserForm;
+import ru.knitu.repo.UserRepository;
 import ru.knitu.service.SignUpService;
 
 import javax.servlet.http.HttpSession;
@@ -30,6 +31,8 @@ public class SignUpController {
     String uploadPath;
     @Value("${activateKey}")
     String activateKey;
+    @Autowired
+    UserRepository userRepository;
 
     @GetMapping("/signUp")
     public String getSignUpPage(){
@@ -41,6 +44,12 @@ public class SignUpController {
             modelMap.addAttribute("error",true);
             return "signUp";
         }
+
+        if(userRepository.findUserByLogin(userForm.getLogin()) != null){
+            modelMap.addAttribute("error1",true);
+            return "signUp";
+        }
+
         if(bindingResult.hasErrors()){
             Map<String, String> errors = ControllerUtils.getErrors(bindingResult);
             modelMap.addAllAttributes(errors);

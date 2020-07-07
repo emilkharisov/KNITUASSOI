@@ -65,18 +65,14 @@ public class IntellectualPropertyAuthorsController {
 
         IntellectualPropertyAuthors intellectualPropertyAuthors = new IntellectualPropertyAuthors();
 
-        String intelectualName = intellectualProperty.split("\\|")[0];
-        String intelectualOwner = intellectualProperty.split("\\|")[1];
 
-        IntellectualProperty intellectualProperty1 = intellectualPropertyRepository.findByNameAndOwner(intelectualName, intelectualOwner);
+
+        IntellectualProperty intellectualProperty1 = intellectualPropertyRepository.findById(Long.parseLong(intellectualProperty));
         intellectualPropertyAuthors.setIntellectualProperty(intellectualProperty1);
 
         if(!workers.equals("")){
-            String firstName = workers.split("\\|")[1];
-            String lastName = workers.split("\\|")[0];
-            String thirdName = workers.split("\\|")[2];
-            String position = workers.split("\\|")[3];
-            intellectualPropertyAuthors.setWorker(workerRepository.findByLastnameAndFirstnameAndThirdnameAndPosition(lastName, firstName, thirdName, position));
+
+            intellectualPropertyAuthors.setWorker(workerRepository.findById(Long.parseLong(workers)));
         }
         intellectualPropertyAuthorsRepository.save(intellectualPropertyAuthors);
         return "intellectualAuthors";

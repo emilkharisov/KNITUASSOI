@@ -60,12 +60,18 @@
                     Добавить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/hello" style="font-size: 25px">Преподователя</a>
+                    <a class="dropdown-item" href="/addWorker" style="font-size: 25px">Преподавателя</a>
                     <a class="dropdown-item" href="/addStudent" style="font-size: 25px">Cтудента</a>
                     <a class="dropdown-item" href="/addEducationalWork" style="font-size: 25px">Учебный труд</a>
                     <a class="dropdown-item" href="/addScienceWork" style="font-size: 25px">Научный труд</a>
+                    <a class="dropdown-item" href="/addConference" style="font-size: 25px">Конференцию</a>
+                    <a class="dropdown-item" href="/addConferenceParticipants" style="font-size: 25px">Участников конференции</a>
+                    <a class="dropdown-item" href="/addIntellectualProperty" style="font-size: 25px">Интеллектуальную собственность</a>
+                    <a class="dropdown-item" href="/intellectualPropertyAuthors" style="font-size: 25px">Авторов Интеллектуальной собственности</a>
+                    <a class="dropdown-item" href="/addQualification" style="font-size: 25px">Квалификацию</a>
+                    <a class="dropdown-item" href="/qualification" style="font-size: 25px">Повышение квалификации</a>
+                    <a class="dropdown-item" href="/addCandidateWork" style="font-size: 25px">Кандидатскую | Докторскую</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#" style="font-size: 25px">Something else here</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -73,17 +79,20 @@
                     Выгрузить
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподователей</a>
+                    <a class="dropdown-item" href="/getExtractListPage" style="font-size: 25px">Преподавателей</a>
                     <a class="dropdown-item" href="/getExtractWorkListPage" style="font-size: 25px">Труды</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#" style="font-size: 25px">Something else here</a>
+                    <a class="dropdown-item" href="/getAddingsPage" style="font-size: 25px">Прочее</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
+                <a class="nav-link" href="/mailSender" style="font-size: 25px">Рассылка сообщений</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login" style="font-size: 25px">Логин</a>
+                <a class="nav-link" href="/getChatPage/54" style="font-size: 25px">Чат</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
             </li>
         </ul>
         <a class="navbar-brand" href="#" style="font-size: 18px">${login}</a>
@@ -91,6 +100,7 @@
         <a class="nav-link" href="/logout" style="font-size: 18px">Выйти</a>
     </div>
 </nav>
+<!-- NAVBAR -->
 
 <div class="form-style-2">
     <div class="form-style-2-heading"><font color="white">
@@ -104,7 +114,7 @@
             <label for="lastname"><font color="white">Фамилия</font>
                 <input class="input-field" style="margin-left: 137px" id="lastname" name="lastname" maxlength="20">
             </label>
-            <label for="thirdname"><font color="white">Отчетсво</font>
+            <label for="thirdname"><font color="white">Отчество</font>
                 <input class="input-field" style="margin-left: 137px" id="thirdname" name="thirdname" maxlength="20">
             </label>
             <label for="telephone"><font color="white">Телефон</font>
@@ -112,14 +122,14 @@
             </label>
             <label for="educationLevel"><font color="white">Уровень образования</font>
                 <select name="educationLevel" style="margin-left: 20px" id="educationLevel" class="select-field">
-                    <option disabled>Выберите уровень образования</option>
+                    <option disabled selected>Выберите уровень образования</option>
                     <option value="Бакалавриат">Бакалавриат</option>
                     <option value="Магистр">Магистр</option>
                 </select>
             </label>
             <label for="formOfEducation"><font color="white">Форма обучения</font>
-                <select name="formOfEducation" style="margin-left: 65px" id="formOfEducation" class="select-field">
-                    <option disabled>Выберите форму обучения</option>
+                <select name="formOfEducation" style="margin-left: 67px" id="formOfEducation" class="select-field">
+                    <option disabled selected>Выберите форму обучения</option>
                     <option value="Очная">Очная</option>
                     <option value="Заочная">Заочная</option>
                 </select>
@@ -130,7 +140,7 @@
             <label for="group"><font color="white">Группа</font>
                 <input class="input-field" style="margin-left: 155px" id="group" name="group" maxlength="8">
             </label>
-            <input type="submit" value="Отправить">
+            <input type="submit" value="Добавить">
     </form>
 </div>
 </body>

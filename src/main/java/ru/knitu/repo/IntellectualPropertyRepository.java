@@ -6,4 +6,5 @@ import ru.knitu.model.Worker;
 
 public interface IntellectualPropertyRepository extends JpaRepository<IntellectualProperty, Long> {
     IntellectualProperty findByNameAndOwner(String name, String owner);
+    IntellectualProperty findById(Long id);
 }
