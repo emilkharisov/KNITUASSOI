@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3d5043e4-d32f-4c7e-8273-eff81e493b1d" name="Default Changelist" comment="V-3 commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/controller/WorkerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/controller/WorkerPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/model/EducationalWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/model/EducationalWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/CandidateWorkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/CandidateWorkRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ConferenceParticipantsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ConferenceParticipantsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ConferenceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ConferenceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/EducationalWorkRepisitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/EducationalWorkRepisitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IncreaseQualificationRelateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IncreaseQualificationRelateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IncreaseQualificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IncreaseQualificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IntellectualPropertyAuthorsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IntellectualPropertyAuthorsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IntellectualPropertyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IntellectualPropertyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ScienceWorkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ScienceWorkRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/knitu/repo/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mainPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mainPage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workerChangePage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workerChangePage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/workersByDegree.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/workersByDegree.ftl" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="new_schema: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="pg_temp_1: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="pg_toast_temp_1: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="conferences: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="users_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users_db: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>data-field</find>
+      <find>button</find>
+      <find>center</find>
+      <find>&lt;div&gt;</find>
+      <find>&lt;div class=&quot;row&quot;&gt;</find>
+      <find>&lt;/div&gt;</find>
+      <find>av</find>
+      <find>popup1</find>
+      <find>submitFunc</find>
+      <find>ArrayList</find>
+      <find>high</find>
+      <find>Search</find>
+      <find>conf</find>
+      <find>deleteAllWorks</find>
+      <find>error</find>
+      <find>firstname</find>
+      <find>redirect</find>
+      <find>studentId</find>
+      <find>ы</find>
+      <find>typeOfWork</find>
+      <find>nameOfWork</find>
+      <find>nameOfJournal</find>
+      <find>tom</find>
+      <find>pages</find>
+      <find>numberOfJournal</find>
+      <find>candidateDelete</find>
+      <find>delete</find>
+      <find>academicDegree</find>
+      <find>input-field</find>
+      <find>white-space</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/templates/mainPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/EditMainPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/StudentEditController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/EducationalWorkRepisitory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/EduWorkAuthorsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/eduWorkPageList.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/scWorkPageList.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ScienceWorkRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ScWorkAuthorsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/scWorkPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/worksOfWorkers/EducationalWorkController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/ScWorkEditController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ConferenceRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/conferenceEditList.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/ConferenceParticipantsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/conferencePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/ConferenceEditController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IntellectualPropertyRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IntellectualPropertyAuthorsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/intPropPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/IntellectualPropertyEditController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IncreaseQualificationRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/editIntellectualList.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/editQualificationList.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/addQualification.ftl" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/rest/TestRest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/IncreaseQualificationRelateRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/QulificationEditController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qualificationPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/model/EducationalWork.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/EduWorkEditController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/eduWorkPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/editMainPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/repo/CandidateWorkRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/candidateWorkEditList.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/candidateWorkPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/CandidateWorkEditController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/AllWorkersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/knitu/controller/WorkerPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/workerChangePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/studentChangePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/conferenceChange.ftl" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/intPropChangePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/candidateChange.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/qualificationEditPage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/scWorkChangePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/eduWorkChangePage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/workersByDegree.ftl" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="KNITU-ASSOI" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="KNITU-ASSOI" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="266" />
+    <option name="width" value="1200" />
+    <option name="height" value="548" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="knitu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="knitu" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="knitu" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="worksSelection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="knitu" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="knitu" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KNITUASSOI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KNITUASSOI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\arina\KNITUASSOI\src\main\resources\static\img" />
+      <recent name="C:\Users\arina\KNITUASSOI\src\uploads\usersImg" />
+      <recent name="C:\Users\arina\KNITUASSOI\src\uploads" />
+      <recent name="C:\Users\arina\KNITUASSOI\src\main\resources\templates" />
+      <recent name="C:\Users\arina\KNITUASSOI\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arina\KNITUASSOI\src\main\resources\templates" />
+      <recent name="C:\Users\arina\KNITUASSOI\src\main\resources\static\img" />
+      <recent name="C:\Users\arina\KNITUASSOI\src\main\resources\static\css" />
+      <recent name="C:\Users\arina\KNITUASSOI\src\uploads" />
+      <recent name="C:\Users\arina\KNITUASSOI\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.knitu.controller.worksSelection.educationalWork" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.knitu.service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="KNITUASSOI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.knitu.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.knitu.app.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d5043e4-d32f-4c7e-8273-eff81e493b1d" name="Default Changelist" comment="" />
+      <created>1571503475867</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571503475867</updated>
+      <workItem from="1571503483194" duration="1484000" />
+      <workItem from="1571505032134" duration="1768000" />
+      <workItem from="1571582814003" duration="1679000" />
+      <workItem from="1571584533331" duration="1778000" />
+      <workItem from="1571586387924" duration="9000" />
+      <workItem from="1571773585651" duration="1592000" />
+      <workItem from="1571775292724" duration="1771000" />
+      <workItem from="1571777095523" duration="823000" />
+      <workItem from="1571946003801" duration="455000" />
+      <workItem from="1572112701368" duration="1343000" />
+      <workItem from="1572114404188" duration="1766000" />
+      <workItem from="1572116243009" duration="1145000" />
+      <workItem from="1572374272649" duration="1665000" />
+      <workItem from="1572375982742" duration="1779000" />
+      <workItem from="1572377793008" duration="752000" />
+      <workItem from="1572891779101" duration="907000" />
+      <workItem from="1572894573497" duration="1645000" />
+      <workItem from="1573156696273" duration="1662000" />
+      <workItem from="1573158519392" duration="2057000" />
+      <workItem from="1573240610169" duration="1744000" />
+      <workItem from="1573242403600" duration="1779000" />
+      <workItem from="1573244229289" duration="1786000" />
+      <workItem from="1573339263793" duration="1966000" />
+      <workItem from="1573400575569" duration="1717000" />
+      <workItem from="1573402325963" duration="1780000" />
+      <workItem from="1573404149042" duration="1782000" />
+      <workItem from="1573406041347" duration="519000" />
+      <workItem from="1574517184472" duration="1709000" />
+      <workItem from="1574518961828" duration="1784000" />
+      <workItem from="1574520778166" duration="2057000" />
+      <workItem from="1574526949167" duration="1780000" />
+      <workItem from="1574528784649" duration="1795000" />
+      <workItem from="1574530691601" duration="1813000" />
+      <workItem from="1574532662014" duration="825000" />
+      <workItem from="1574805834960" duration="593000" />
+      <workItem from="1575118705970" duration="1293000" />
+      <workItem from="1575571011907" duration="1521000" />
+      <workItem from="1575572733151" duration="1774000" />
+      <workItem from="1575574537664" duration="2224000" />
+      <workItem from="1575674348138" duration="1566000" />
+      <workItem from="1575676106457" duration="1782000" />
+      <workItem from="1575677947948" duration="1034000" />
+      <workItem from="1576689593054" duration="1664000" />
+      <workItem from="1576691319794" duration="1784000" />
+      <workItem from="1576699574926" duration="1782000" />
+      <workItem from="1576701398344" duration="1867000" />
+      <workItem from="1577388013804" duration="1494000" />
+      <workItem from="1577389588347" duration="1778000" />
+      <workItem from="1577391409917" duration="1142000" />
+      <workItem from="1577442290581" duration="1487000" />
+      <workItem from="1578073527845" duration="1652000" />
+      <workItem from="1578075348303" duration="1718000" />
+      <workItem from="1578077192722" duration="1691000" />
+      <workItem from="1578078928987" duration="1788000" />
+      <workItem from="1578080798946" duration="1846000" />
+      <workItem from="1578082680130" duration="1767000" />
+      <workItem from="1578084608202" duration="1729000" />
+      <workItem from="1578086369347" duration="1018000" />
+      <workItem from="1578144219777" duration="1832000" />
+      <workItem from="1578146124619" duration="1280000" />
+      <workItem from="1578157829272" duration="1826000" />
+      <workItem from="1578159698854" duration="1824000" />
+      <workItem from="1578161552613" duration="2105000" />
+      <workItem from="1578165459457" duration="1843000" />
+      <workItem from="1578167374120" duration="2056000" />
+      <workItem from="1578169586371" duration="1768000" />
+      <workItem from="1578171405092" duration="1343000" />
+      <workItem from="1578242972230" duration="1744000" />
+      <workItem from="1578244763540" duration="1779000" />
+      <workItem from="1578246720105" duration="300000" />
+      <workItem from="1578257110996" duration="1764000" />
+      <workItem from="1578258924921" duration="1772000" />
+      <workItem from="1578261605018" duration="1767000" />
+      <workItem from="1578263406644" duration="2019000" />
+      <workItem from="1578265459397" duration="2352000" />
+      <workItem from="1578327835258" duration="1935000" />
+      <workItem from="1578329823375" duration="1770000" />
+      <workItem from="1578331646185" duration="1795000" />
+      <workItem from="1578333561168" duration="1361000" />
+      <workItem from="1578345693795" duration="1609000" />
+      <workItem from="1578347355379" duration="2260000" />
+      <workItem from="1578350266445" duration="1695000" />
+      <workItem from="1578509167596" duration="1708000" />
+      <workItem from="1578511027761" duration="1789000" />
+      <workItem from="1578512879297" duration="1776000" />
+      <workItem from="1578514698856" duration="1879000" />
+      <workItem from="1578588988811" duration="1687000" />
+      <workItem from="1578590733876" duration="1779000" />
+      <workItem from="1578592544526" duration="1779000" />
+      <workItem from="1578594360592" duration="1081000" />
+      <workItem from="1578860548416" duration="1705000" />
+      <workItem from="1578862292324" duration="1822000" />
+      <workItem from="1578945415226" duration="1697000" />
+      <workItem from="1578947158423" duration="944000" />
+      <workItem from="1579203684259" duration="1659000" />
+      <workItem from="1579205387065" duration="1107000" />
+      <workItem from="1579208155501" duration="1420000" />
+      <workItem from="1579210676692" duration="1361000" />
+      <workItem from="1579347946733" duration="1020000" />
+      <workItem from="1579349745020" duration="1773000" />
+      <workItem from="1579351557200" duration="1733000" />
+      <workItem from="1579436915982" duration="1379000" />
+      <workItem from="1579438791338" duration="1771000" />
+      <workItem from="1579440595960" duration="1779000" />
+      <workItem from="1579442406654" duration="1781000" />
+      <workItem from="1579444267519" duration="1780000" />
+      <workItem from="1579446127760" duration="1784000" />
+      <workItem from="1579447942438" duration="2073000" />
+      <workItem from="1579450057569" duration="1866000" />
+      <workItem from="1579452114187" duration="1057000" />
+      <workItem from="1579498008073" duration="1207000" />
+      <workItem from="1579853394055" duration="589000" />
+      <workItem from="1579861020258" duration="752000" />
+      <workItem from="1581363842223" duration="341000" />
+      <workItem from="1581974844389" duration="1669000" />
+      <workItem from="1581976554233" duration="1778000" />
+      <workItem from="1581978397672" duration="1615000" />
+      <workItem from="1584648075409" duration="1676000" />
+      <workItem from="1584649813083" duration="1776000" />
+      <workItem from="1584651626788" duration="1774000" />
+      <workItem from="1584653433889" duration="1778000" />
+      <workItem from="1585064405165" duration="1671000" />
+      <workItem from="1585066217605" duration="1778000" />
+      <workItem from="1585068041398" duration="1778000" />
+      <workItem from="1585069851170" duration="1788000" />
+      <workItem from="1585499838736" duration="148000" />
+      <workItem from="1586028918757" duration="1746000" />
+      <workItem from="1586030698969" duration="1791000" />
+      <workItem from="1586032521062" duration="819000" />
+      <workItem from="1586083696275" duration="38000" />
+      <workItem from="1586628038362" duration="599000" />
+      <workItem from="1586688929890" duration="1647000" />
+      <workItem from="1586690610185" duration="1786000" />
+      <workItem from="1586692423759" duration="1482000" />
+      <workItem from="1586695661204" duration="1395000" />
+      <workItem from="1586697552305" duration="1744000" />
+      <workItem from="1586703726031" duration="1781000" />
+      <workItem from="1586705548993" duration="1780000" />
+      <workItem from="1586707397677" duration="1778000" />
+      <workItem from="1586709209763" duration="1839000" />
+      <workItem from="1586713361160" duration="15000" />
+      <workItem from="1586770149613" duration="65000" />
+      <workItem from="1586770303840" duration="1777000" />
+      <workItem from="1586772109386" duration="1783000" />
+      <workItem from="1586773929444" duration="1788000" />
+      <workItem from="1586775746330" duration="1948000" />
+      <workItem from="1586778445673" duration="1782000" />
+      <workItem from="1586780256110" duration="1782000" />
+      <workItem from="1586782066887" duration="452000" />
+      <workItem from="1586948558801" duration="440000" />
+      <workItem from="1587209147986" duration="1517000" />
+      <workItem from="1587210787492" duration="1778000" />
+      <workItem from="1587212598757" duration="1780000" />
+      <workItem from="1587214410260" duration="1782000" />
+      <workItem from="1587216228050" duration="1780000" />
+      <workItem from="1587218039413" duration="1689000" />
+      <workItem from="1587243398897" duration="1630000" />
+      <workItem from="1587245075841" duration="1090000" />
+      <workItem from="1587297439451" duration="1751000" />
+      <workItem from="1587299224769" duration="1013000" />
+      <workItem from="1587302268973" duration="1749000" />
+      <workItem from="1587304078032" duration="1340000" />
+      <workItem from="1587561778155" duration="382000" />
+      <workItem from="1587637149660" duration="1478000" />
+      <workItem from="1587638654917" duration="1814000" />
+      <workItem from="1587640501991" duration="1821000" />
+      <workItem from="1587661548837" duration="1706000" />
+      <workItem from="1588002230218" duration="1656000" />
+      <workItem from="1588003942556" duration="1822000" />
+      <workItem from="1588157843834" duration="1676000" />
+      <workItem from="1588159574425" duration="1776000" />
+      <workItem from="1588161381571" duration="111000" />
+      <workItem from="1588326920431" duration="1751000" />
+      <workItem from="1588328718060" duration="1775000" />
+      <workItem from="1588330531106" duration="1156000" />
+      <workItem from="1588512859457" duration="1738000" />
+      <workItem from="1588514640908" duration="1807000" />
+      <workItem from="1588516880978" duration="1381000" />
+      <workItem from="1588592815994" duration="1737000" />
+      <workItem from="1588594588052" duration="2085000" />
+      <workItem from="1588596711432" duration="1647000" />
+      <workItem from="1588677950644" duration="2036000" />
+      <workItem from="1588680283424" duration="977000" />
+      <workItem from="1588683167487" duration="1622000" />
+      <workItem from="1588685704000" duration="48000" />
+      <workItem from="1588848322135" duration="1741000" />
+      <workItem from="1588850102652" duration="1776000" />
+      <workItem from="1588851924797" duration="1251000" />
+      <workItem from="1588856888881" duration="1776000" />
+      <workItem from="1588858698639" duration="1825000" />
+      <workItem from="1588860568572" duration="1436000" />
+      <workItem from="1588863047319" duration="2234000" />
+      <workItem from="1588865319161" duration="988000" />
+      <workItem from="1588867139697" duration="1605000" />
+      <workItem from="1588923369710" duration="60000" />
+      <workItem from="1588923581326" duration="54000" />
+      <workItem from="1588923671171" duration="4331000" />
+      <workItem from="1589106802833" duration="7505000" />
+      <workItem from="1589196594340" duration="9634000" />
+      <workItem from="1589294728641" duration="4530000" />
+      <workItem from="1589361163052" duration="320000" />
+      <workItem from="1589365696372" duration="5363000" />
+      <workItem from="1589376902071" duration="6353000" />
+      <workItem from="1589447955318" duration="5139000" />
+      <workItem from="1589459617740" duration="7160000" />
+      <workItem from="1589558938534" duration="1635000" />
+      <workItem from="1589622027421" duration="4572000" />
+      <workItem from="1589723794488" duration="791000" />
+      <workItem from="1589799870706" duration="3421000" />
+      <workItem from="1589816472730" duration="932000" />
+      <workItem from="1589883073247" duration="6766000" />
+      <workItem from="1589983155048" duration="3963000" />
+      <workItem from="1589987580920" duration="759000" />
+      <workItem from="1590059716551" duration="3476000" />
+      <workItem from="1590325583323" duration="6909000" />
+      <workItem from="1590402907924" duration="1866000" />
+      <workItem from="1590409054560" duration="4742000" />
+      <workItem from="1590496538855" duration="699000" />
+      <workItem from="1590584260708" duration="1835000" />
+      <workItem from="1590587076605" duration="304000" />
+      <workItem from="1591440109144" duration="4501000" />
+      <workItem from="1591528324069" duration="2523000" />
+      <workItem from="1593008009743" duration="4214000" />
+      <workItem from="1593297397651" duration="1154000" />
+      <workItem from="1593354124821" duration="1776000" />
+      <workItem from="1593781993101" duration="5805000" />
+      <workItem from="1593856398390" duration="5787000" />
+      <workItem from="1594118148546" duration="4344000" />
+      <workItem from="1594553214050" duration="7122000" />
+      <workItem from="1596307839754" duration="3888000" />
+      <workItem from="1599135724516" duration="9280000" />
+      <workItem from="1599211009056" duration="5908000" />
+      <workItem from="1599750785412" duration="639000" />
+      <workItem from="1599765761482" duration="1037000" />
+      <workItem from="1601732151160" duration="6553000" />
+      <workItem from="1601806919337" duration="3015000" />
+      <workItem from="1602433413805" duration="420000" />
+      <workItem from="1602680781027" duration="3972000" />
+      <workItem from="1602756673131" duration="729000" />
+      <workItem from="1604149345329" duration="4287000" />
+      <workItem from="1604228345638" duration="5394000" />
+      <workItem from="1605345518772" duration="7356000" />
+      <workItem from="1607601002076" duration="596000" />
+      <workItem from="1607682530196" duration="6738000" />
+      <workItem from="1608198195785" duration="6578000" />
+      <workItem from="1608812201901" duration="2242000" />
+      <workItem from="1609222973994" duration="2504000" />
+      <workItem from="1609675527690" duration="862000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update commit">
+      <created>1589298023757</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589298023757</updated>
+    </task>
+    <task id="LOCAL-00002" summary="New commit">
+      <created>1589365853174</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589365853174</updated>
+    </task>
+    <task id="LOCAL-00003" summary="V-3 commit">
+      <created>1589987732131</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589987732131</updated>
+    </task>
+    <task id="LOCAL-00004" summary="V-3 commit">
+      <created>1594126802998</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594126802998</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="499749000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4908722" visible="true" weight="0.2281491" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Persistence" order="8" sideWeight="0.5091278" side_tool="true" weight="0.27956298" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32974428" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5208614" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32974428" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.6460296" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32974428" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32974428" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32974428" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.15938303" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="ReST Console" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" side_tool="true" weight="0.32969153" />
+      <window_info anchor="right" id="Database" order="10" weight="0.27956298" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update commit" />
+    <MESSAGE value="New commit" />
+    <MESSAGE value="V-3 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="V-3 commit" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/repo/MessageRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/chat/ChatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/repo/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/repo/CandidateWorkRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/model/CandidateWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addCandidateWork.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="148" column="28" lean-forward="true" selection-start-line="112" selection-start-column="20" selection-end-line="148" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/candidateWorkEditList.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="108" column="43" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/service/CandidateWorkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="72" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/EditMainPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/ee7073fb-5b53-43a3-8902-990e8defe372.TABLE:users_db.public.candidate_work">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>ee7073fb-5b53-43a3-8902-990e8defe372.TABLE:users_db.public.candidate_work</OriginalElement>
+          <nodes>
+            <node x="" y="">ee7073fb-5b53-43a3-8902-990e8defe372.TABLE:users_db.public.candidate_work</node>
+            <node x="" y="">ee7073fb-5b53-43a3-8902-990e8defe372.TABLE:users_db.public.workers_assoi</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9455223880597013" x="135.0" y="598.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.5.12.RELEASE/spring-boot-autoconfigure-1.5.12.RELEASE.jar!/org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="263" column="44" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/ConferenceEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475">
+          <caret line="80" selection-start-line="80" selection-end-line="97" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/candidateWorkPage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3111">
+          <caret line="183" column="93" selection-start-line="183" selection-start-column="78" selection-end-line="183" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ee7073fb-5b53-43a3-8902-990e8defe372/database/users_db/schema/public/table/candidate_work">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="7811514b-8889-4c98-9e6c-f218a531d225">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/AllWorkersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/CandidateWorkEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="92" column="61" lean-forward="true" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/WorkerPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/StudentEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="135" column="33" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/studentChangePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="50" column="65" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms2.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="507" column="22" selection-start-line="507" selection-start-column="22" selection-end-line="507" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ee7073fb-5b53-43a3-8902-990e8defe372/database/users_db/schema/public/table/conferences">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="7811514b-8889-4c98-9e6c-f218a531d225">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/IntellectualPropertyEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="117" column="33" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/conferencePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1103">
+          <caret line="204" column="53" lean-forward="true" selection-start-line="204" selection-start-column="53" selection-end-line="204" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/conferenceChange.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/intPropChangePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="49" column="60" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/workerChangePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="45" selection-start-line="45" selection-end-line="62" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#18;n#table#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/candidateChange.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/EduWorkEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="103" column="33" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/form/EducationalWorkForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/model/EducationalWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/ScWorkEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="104" column="32" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qualificationPage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="182" column="97" selection-start-line="182" selection-start-column="97" selection-end-line="182" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/edit/QulificationEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="83" column="33" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/qualificationEditPage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="50" column="54" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/eduWorkChangePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="53" column="78" selection-start-line="53" selection-start-column="78" selection-end-line="53" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mainPage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/workersSelection/ExpiringContractSelectAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="44" column="31" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/scWorkChangePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="53" column="78" selection-start-line="53" selection-start-column="78" selection-end-line="53" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/ee7073fb-5b53-43a3-8902-990e8defe372.TABLE:users_db.public.workers_assoi">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>ee7073fb-5b53-43a3-8902-990e8defe372.TABLE:users_db.public.workers_assoi</OriginalElement>
+          <nodes>
+            <node x="" y="">ee7073fb-5b53-43a3-8902-990e8defe372.TABLE:users_db.public.workers_assoi</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8940568475452196" x="136.0" y="367.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ee7073fb-5b53-43a3-8902-990e8defe372/database/users_db/schema/public/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="e5f98e05-0ce7-4fde-82bd-c9c59eecc64d">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ee7073fb-5b53-43a3-8902-990e8defe372/database/users_db/schema/public/table/workers_assoi">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="e5f98e05-0ce7-4fde-82bd-c9c59eecc64d">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ee7073fb-5b53-43a3-8902-990e8defe372/database/users_db/schema/public/table/users_assoi">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a17834c5-3e0a-46f4-970e-8d130cc4e010">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/addWorker.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="218" column="32" selection-start-line="218" selection-start-column="32" selection-end-line="218" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/model/Conference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/model/Worker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/workersByDegree.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/controller/workersSelection/AcademicDegreeSelectAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/expiredContract.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="109" column="69" selection-start-line="109" selection-start-column="69" selection-end-line="109" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/knitu/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

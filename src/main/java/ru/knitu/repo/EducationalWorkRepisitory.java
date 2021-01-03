@@ -36,4 +36,6 @@ public interface EducationalWorkRepisitory  extends JpaRepository<EducationalWor
 
     EducationalWork findById(long id);
 
+
+
 }

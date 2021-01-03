@@ -235,6 +235,14 @@ public class WorkerPageController {
         modelMap.addAttribute("issuing", issuing);
         modelMap.addAttribute("code", code);
 
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        modelMap.addAttribute("dateOfBirth", simpleDateFormat.format(worker.getDateOfBirth()));
+        modelMap.addAttribute("dateOfBeginWork", simpleDateFormat.format(worker.getDateOfBeginWork()));
+        modelMap.addAttribute("dateOfPedBeginWork", simpleDateFormat.format(worker.getDateOfPedBeginWork()));
+        modelMap.addAttribute("dateEndOfContract", simpleDateFormat.format(worker.getDateEndOfContract()));
+
+
 
         return "workerChangePage";
     }

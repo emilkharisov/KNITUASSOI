@@ -42,6 +42,25 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var position = '${worker.getPosition()}';
+            var hiringConditionOfWorker = '${worker.getHiringConditionOfWorker()}';
+            var academicRank = '${worker.getAcademicRank()}';
+            var academicDegree = '${worker.getAcademicDegree()}';
+            var education = '${worker.getEducation()}';
+
+            document.getElementById('position').value = position;
+            document.getElementById('hiringConditionOfWorker').value = hiringConditionOfWorker;
+            document.getElementById('academicRank').value = academicRank;
+            document.getElementById('academicDegree').value = academicDegree;
+            document.getElementById('education').value = education;
+
+        });
+    </script>
 </head>
 <body>
 
@@ -112,7 +131,7 @@
         <table cellpadding="20">
             <tr>
                 <td><label>Дата рождения</label></td>
-                <td><input type="date" id="dateOfBirth" name="dateOfBirth"></td>
+                <td><input type="date" id="dateOfBirth" name="dateOfBirth" value="${dateOfBirth}"></td>
             </tr>
             <tr>
                 <td><label>Номер телефона</label></td>
@@ -190,15 +209,15 @@
             </tr>
             <tr>
                 <td><label>Дата начала работы</label></td>
-                <td><input type="date" id="dateOfBeginWork" name="dateOfBeginWork"></td>
+                <td><input type="date" id="dateOfBeginWork" name="dateOfBeginWork" value="${dateOfBeginWork}"></td>
             </tr>
             <tr>
                 <td><label>Дата начала пед стажа</label></td>
-                <td><input type="date"  id="dateOfPedBeginWork" name="dateOfPedBeginWork"</td>
+                <td><input type="date"  id="dateOfPedBeginWork" name="dateOfPedBeginWork" value="${dateOfPedBeginWork}"</td>
             </tr>
             <tr>
                 <td><label>Дата окончания контракта</label></td>
-                <td><input type="date" id="dateEndOfContract" name="dateEndOfContract" value="21.02.2000"></td>
+                <td><input type="date" id="dateEndOfContract" name="dateEndOfContract" value="${dateEndOfContract}"></td>
             </tr>
             <tr>
                 <td><label>Адрес Регистрации</label></td>

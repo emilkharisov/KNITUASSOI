@@ -25,4 +25,5 @@ public interface ScienceWorkRepository extends JpaRepository<ScienceWork, Long> 
 
     ScienceWork findById(long id);
 
+
 }

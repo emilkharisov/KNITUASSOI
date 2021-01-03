@@ -231,7 +231,7 @@
                 <a class="nav-link" href="/getChatPage/54" style="font-size: 25px">Чат</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signUp" style="font-size: 25px">Регистрация</a>
+                <a class="nav-link" href="/editMainPage" style="font-size: 25px">Редактирование</a>
             </li>
         </ul>
         <a class="navbar-brand" href="#" style="font-size: 18px">${login}</a>

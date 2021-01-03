@@ -19,7 +19,7 @@ public class EducationalWork {
     private Long id;
     private String typeOfWork;
     private String nameOfWork;
-    private int amountOfPages;
-    private int yearOfPublication;
+    private Integer amountOfPages;
+    private Integer yearOfPublication;
     private String publishing;
 }

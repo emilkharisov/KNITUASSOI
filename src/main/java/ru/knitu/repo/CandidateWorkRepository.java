@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface CandidateWorkRepository extends JpaRepository<CandidateWork, Long> {
     List <CandidateWork> findAllByWorker(Worker worker);
+    List <CandidateWork> findAllByNameContaining(String name);
 }

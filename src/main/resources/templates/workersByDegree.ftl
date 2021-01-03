@@ -102,7 +102,7 @@
     <form method="post" action="/selectByAcademicDegree">
         <label for="academicDegree"><font color="white">Учебная степень</font>
             <select name="academicDegree" id="academicDegree" class="select-field" style="margin-left: -165px">
-                <option disabled>Выберите учебную степень</option>
+                <option disabled selected>Выберите учебную степень</option>
                 <option value="Доктор технических наук (д.т.н.)">Доктор технических наук (д.т.н.)</option>
                 <option value="Доктор педагогических наук (д.пед.н.)">Доктор педагогических наук (д.пед.н.)</option>
                 <option value="Доктор физико-математических наук (д.ф.-м.н.)">Доктор физико-математических наук (д.ф.-м.н.)</option>
